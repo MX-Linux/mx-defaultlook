@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>defaultlook</string>
   </property>
+  <property name="windowIcon">
+   <iconset theme="preferences-desktop-theme"/>
+  </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">
