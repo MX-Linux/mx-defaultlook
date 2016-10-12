@@ -4,9 +4,9 @@
  * Copyright (C) 2015 MX Authors
  *
  * Authors: Dolphin Oracle
- *          MX Community <http://mxlinux.org>
+ *         MX Linux <http://mxlinux.org>
  *
- * This file is part of mx-welcome.
+ * This file is part of mx-defaultlook.
  *
  * mx-welcome is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -42,7 +42,7 @@ defaultlook::~defaultlook()
 // setup versious items first time program runs
 void defaultlook::setup()
 {
-    this->setWindowTitle(tr("Default Look"));
+    this->setWindowTitle(tr("MX Default Look"));
     this->adjustSize();
     whichpanel();
     setupuiselections();
@@ -71,6 +71,7 @@ void defaultlook::setupuiselections()
     ui->checkHorz->setChecked(false);
     ui->checkLightTheme->setChecked(false);
     ui->checkDarkTheme->setChecked(false);
+    ui->checkFirefox->setChecked(false);
 
     //only enable options that make sense
 
@@ -94,6 +95,10 @@ void defaultlook::setupuiselections()
     if (test == "2") {
         ui->checkVert->setEnabled(false);
         ui->checkHorz->setEnabled(true);
+    }
+    test = runCmd("grep mx-default /home/$USER/.local/share/applications/firefox.desktop").output;
+    if (test == "#mx-defaultlook-override") {
+        ui->checkFirefox->setChecked(true);
     }
 
 }
@@ -398,34 +403,43 @@ void defaultlook::on_buttonApply_clicked()
         //read in plugin ID's
         if (ui->checkHorz->isChecked()) {
             fliptohorizontal();
-            system("sleep .5");
+            runCmd("sleep .5");
         }
 
         if (ui->checkVert->isChecked()) {
             fliptovertical();
-            system("sleep .5");
+            runCmd("sleep .5");
         }
 
         if (ui->checkDarkTheme->isChecked()) {
-            system("xfconf-query -c xsettings -p /Net/ThemeName -s 'Adwaita-Xfce Dark'");
-            system("sleep .5");
-            system("xfconf-query -c xfwm4 -p /general/theme -s 'Adwaita-Xfce Dark'");
-            system("sleep .5");
+            runCmd("xfconf-query -c xsettings -p /Net/ThemeName -s 'Adwaita-Xfce Dark'");
+            runCmd("sleep .5");
+            runCmd("xfconf-query -c xfwm4 -p /general/theme -s 'Adwaita-Xfce Dark'");
+            runCmd("sleep .5");
+            runCmd("xfconf-query -c xsettings -p /Net/IconThemeName -s 'Papirus-Dark-GTK'");
+            runCmd("sleep .5");
         }
 
         if (ui->checkLightTheme->isChecked()) {
-            system("xfconf-query -c xsettings -p /Net/ThemeName -s Greybird-thick-grip");
-            system("sleep .5");
-            system("xfconf-query -c xfwm4 -p /general/theme -s Greybird-thick-grip");
-            system("sleep .5");
+            runCmd("xfconf-query -c xsettings -p /Net/ThemeName -s Greybird-thick-grip");
+            runCmd("sleep .5");
+            runCmd("xfconf-query -c xfwm4 -p /general/theme -s Greybird-thick-grip");
+            runCmd("sleep .5");
+            runCmd("xfconf-query -c xsettings -p /Net/IconThemeName -s 'Papirus-GTK'");
+            runCmd("sleep .5");
+            ui->checkFirefox->setChecked(false);
+        }
+        if (ui->checkFirefox->isChecked()) {
+            runCmd("cp /usr/share/mx-defaultlook/firefox.forcelight /home/$USER/.local/share/applications/firefox.desktop");
+        } else {
+            runCmd("rm /home/$USER/.local/share/applications/firefox.desktop");
         }
 
-        // reset gui
+            // reset gui
 
-        setupuiselections();
+            setupuiselections();
 
     }
-
 }
 
 void defaultlook::on_checkLightTheme_clicked()
@@ -445,4 +459,30 @@ void defaultlook::on_checkDarkTheme_clicked()
 void defaultlook::on_buttonCancel_clicked()
 {
     qApp->quit();
+}
+
+void defaultlook::on_buttonAbout_clicked()
+{
+    this->hide();
+    QMessageBox msgBox(QMessageBox::NoIcon,
+                       tr("About MX Default Look"), "<p align=\"center\"><b><h2>" +
+                       tr("MX Default Look") + "</h2></b></p><p align=\"center\">" + tr("Version: ") + version + "</p><p align=\"center\"><h3>" +
+                       tr("App for quick default ui theme changes") +
+                       "</h3></p><p align=\"center\"><a href=\"http://mxlinux.org\">http://mxlinux.org</a><br /></p><p align=\"center\">" +
+                       tr("Copyright (c) MX Linux") + "<br /><br /></p>", 0, this);
+    msgBox.addButton(tr("Cancel"), QMessageBox::AcceptRole); // because we want to display the buttons in reverse order we use counter-intuitive roles.
+    msgBox.addButton(tr("License"), QMessageBox::RejectRole);
+    if (msgBox.exec() == QMessageBox::RejectRole) {
+        system("mx-viewer file:///usr/share/doc/mx-defaultlook/license.html '" + tr("MX Default Look").toUtf8() + " " + tr("License").toUtf8() + "'");
+    }
+    this->show();
+}
+
+// Help button clicked
+void defaultlook::on_buttonHelp_clicked()
+{
+    this->hide();
+    QString cmd = QString("mx-viewer http://www.mxlinux.org/wiki/help-files/help-mx-defaultlook '%1'").arg(tr("MX Default Look"));
+    system(cmd.toUtf8());
+    this->show();
 }
