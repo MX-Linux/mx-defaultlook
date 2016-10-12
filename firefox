@@ -1,0 +1,8 @@
+#!/bin/bash
+
+
+check=$(grep mx-default /home/$USER/.local/share/applications/firefox.desktop)
+echo $check
+if [ "$check" = "#mx-defaultlook-override" ]; then
+env GTK_THEME=Adwaita /opt/firefox/firefox
+fi
