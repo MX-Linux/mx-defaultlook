@@ -4,9 +4,9 @@
  * Copyright (C) 2015 MX Authors
  *
  * Authors: Dolphin Oracle
- *          MX Community <http://mxlinux.org>
+ *          MX Linux <http://mxlinux.org>
  *
- * This file is part of mx-welcome.
+ * This file is part of mx-defaultlook.
  *
  * mx-welcome is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
