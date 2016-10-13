@@ -25,6 +25,7 @@
 #include "defaultlook.h"
 #include "ui_defaultlook.h"
 #include "QDebug"
+#include "QDir"
 
 defaultlook::defaultlook(QWidget *parent) :
     QMainWindow(parent),
@@ -96,8 +97,9 @@ void defaultlook::setupuiselections()
         ui->checkVert->setEnabled(false);
         ui->checkHorz->setEnabled(true);
     }
-    test = runCmd("grep mx-default /home/$USER/.local/share/applications/firefox.desktop").output;
-    if (test == "#mx-defaultlook-override") {
+    QString home_path = QDir::homePath();
+    QFileInfo file(home_path + "/.config/FirefoxDarkThemeOverride.check");
+    if (file.exists()) {
         ui->checkFirefox->setChecked(true);
     }
 
@@ -430,17 +432,17 @@ void defaultlook::on_buttonApply_clicked()
             ui->checkFirefox->setChecked(false);
         }
         if (ui->checkFirefox->isChecked()) {
-            runCmd("cp /usr/share/mx-defaultlook/firefox.forcelight /home/$USER/.local/share/applications/firefox.desktop");
-        } else {
-            runCmd("rm /home/$USER/.local/share/applications/firefox.desktop");
-        }
-
-            // reset gui
-
-            setupuiselections();
-
+            runCmd("touch /home/$USER/.config/FirefoxDarkThemeOverride.check");
+        } else
+            runCmd("rm /home/$USER/.config/FirefoxDarkThemeOverride.check");
     }
+
+    // reset gui
+
+    setupuiselections();
+
 }
+
 
 void defaultlook::on_checkLightTheme_clicked()
 {
