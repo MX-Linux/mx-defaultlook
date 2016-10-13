@@ -57,6 +57,7 @@ public:
     QString output;
     QString panel;
 
+
     void setup();
     void setupuiselections();
     void fliptohorizontal();
@@ -81,6 +82,8 @@ private slots:
     void on_buttonAbout_clicked();
 
     void on_buttonHelp_clicked();
+
+
 
 private:
     Ui::defaultlook *ui;

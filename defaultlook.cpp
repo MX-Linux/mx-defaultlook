@@ -79,7 +79,7 @@ void defaultlook::setupuiselections()
     //if panel is already horizontal, set vertical option available, and vice versa
 
     QString test = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel +"/mode").output;
-    qDebug() << test;
+
     if (test == "") {
         ui->checkVert->setEnabled(true);
         ui->checkHorz->setEnabled(false);
@@ -414,33 +414,47 @@ void defaultlook::on_buttonApply_clicked()
         }
 
         if (ui->checkDarkTheme->isChecked()) {
-            runCmd("xfconf-query -c xsettings -p /Net/ThemeName -s 'Adwaita-Xfce Dark'");
-            runCmd("sleep .5");
-            runCmd("xfconf-query -c xfwm4 -p /general/theme -s 'Adwaita-Xfce Dark'");
-            runCmd("sleep .5");
-            runCmd("xfconf-query -c xsettings -p /Net/IconThemeName -s 'Papirus-Dark-GTK'");
-            runCmd("sleep .5");
+
+            QFileInfo theme("/usr/share/themes/Adwaita-Xfce Dark");
+            if (theme.exists()) {
+                runCmd("xfconf-query -c xsettings -p /Net/ThemeName -s 'Adwaita-Xfce Dark'");
+                runCmd("sleep .5");
+                runCmd("xfconf-query -c xfwm4 -p /general/theme -s 'Adwaita-Xfce Dark'");
+                runCmd("sleep .5");
+                QFileInfo icon("/usr/share/icons/Papirus-Dark-GTK");
+                if (icon.exists()) {
+                    runCmd("xfconf-query -c xsettings -p /Net/IconThemeName -s 'Papirus-Dark-GTK'");
+                    runCmd("sleep .5");
+                }
+            }
         }
 
         if (ui->checkLightTheme->isChecked()) {
-            runCmd("xfconf-query -c xsettings -p /Net/ThemeName -s Greybird-thick-grip");
-            runCmd("sleep .5");
-            runCmd("xfconf-query -c xfwm4 -p /general/theme -s Greybird-thick-grip");
-            runCmd("sleep .5");
-            runCmd("xfconf-query -c xsettings -p /Net/IconThemeName -s 'Papirus-GTK'");
-            runCmd("sleep .5");
-            ui->checkFirefox->setChecked(false);
+            QFileInfo theme("/usr/share/themes/Greybird-thick-grip");
+            if (theme.exists()) {
+                runCmd("xfconf-query -c xsettings -p /Net/ThemeName -s Greybird-thick-grip");
+                runCmd("sleep .5");
+                runCmd("xfconf-query -c xfwm4 -p /general/theme -s Greybird-thick-grip");
+                runCmd("sleep .5");
+                QFileInfo icon("/usr/share/icons/Papirus-GTK");
+                if (icon.exists()) {
+                    runCmd("xfconf-query -c xsettings -p /Net/IconThemeName -s 'Papirus-GTK'");
+                    runCmd("sleep .5");
+                }
+                ui->checkFirefox->setChecked(false);
+            }
         }
         if (ui->checkFirefox->isChecked()) {
             runCmd("touch /home/$USER/.config/FirefoxDarkThemeOverride.check");
-            message();
         } else {
             runCmd("rm /home/$USER/.config/FirefoxDarkThemeOverride.check");
-            message();
         }
-    }
-    // reset gui
 
+    }
+    // message that we are done
+    message();
+
+    // reset gui
     setupuiselections();
 
 }
@@ -493,6 +507,7 @@ void defaultlook::on_buttonHelp_clicked()
 
 void defaultlook::message()
 {
-    QMessageBox::information(0, tr("Firefox Override"),
-                             tr(" Restart Firefox for change to take effect)"));
+    QMessageBox::information(0, tr("MX Default Looks"),
+                             tr("Firefox may require a restart for changes to take affect"));
 }
+
