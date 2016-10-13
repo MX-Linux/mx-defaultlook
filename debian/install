@@ -3,6 +3,5 @@ mx-defaultlook.desktop	 usr/share/applications/mx
 translations/*.qm 	 usr/share/mx-defaultlook/locale
 icons/*                 usr/share/mx-defaultlook/icons
 license.html            usr/share/doc/mx-defaultlook
-firefox.forcelight	usr/share/mx-defaultlook
 firefox			usr/local/bin/firefox
 
