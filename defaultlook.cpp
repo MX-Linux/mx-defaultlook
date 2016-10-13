@@ -433,10 +433,12 @@ void defaultlook::on_buttonApply_clicked()
         }
         if (ui->checkFirefox->isChecked()) {
             runCmd("touch /home/$USER/.config/FirefoxDarkThemeOverride.check");
-        } else
+            message();
+        } else {
             runCmd("rm /home/$USER/.config/FirefoxDarkThemeOverride.check");
+            message();
+        }
     }
-
     // reset gui
 
     setupuiselections();
@@ -487,4 +489,10 @@ void defaultlook::on_buttonHelp_clicked()
     QString cmd = QString("mx-viewer http://www.mxlinux.org/wiki/help-files/help-mx-defaultlook '%1'").arg(tr("MX Default Look"));
     system(cmd.toUtf8());
     this->show();
+}
+
+void defaultlook::message()
+{
+    QMessageBox::information(0, tr("Firefox Override"),
+                             tr(" Restart Firefox for change to take effect)"));
 }
