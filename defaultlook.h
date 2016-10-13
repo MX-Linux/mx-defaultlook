@@ -62,6 +62,7 @@ public:
     void fliptohorizontal();
     void fliptovertical();
     void whichpanel();
+    void message();
 
 public slots:
 
