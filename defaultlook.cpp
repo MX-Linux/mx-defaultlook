@@ -441,7 +441,7 @@ void defaultlook::on_buttonApply_clicked()
                     runCmd("xfconf-query -c xsettings -p /Net/IconThemeName -s 'Papirus-GTK'");
                     runCmd("sleep .5");
                 }
-                ui->checkFirefox->setChecked(false);
+                //ui->checkFirefox->setChecked(false);
             }
         }
         if (ui->checkFirefox->isChecked()) {
@@ -464,6 +464,7 @@ void defaultlook::on_checkLightTheme_clicked()
 {
     if (ui->checkLightTheme->isChecked()) {
         ui->checkDarkTheme->setChecked(false);
+        ui->checkFirefox->setChecked(false);
     }
 }
 
@@ -508,6 +509,6 @@ void defaultlook::on_buttonHelp_clicked()
 void defaultlook::message()
 {
     QMessageBox::information(0, tr("MX Default Looks"),
-                             tr("Firefox may require a restart for changes to take affect"));
+                             tr("Finished! Firefox may require a restart for changes to take affect"));
 }
 
