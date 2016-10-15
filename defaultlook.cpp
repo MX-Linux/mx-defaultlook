@@ -502,7 +502,7 @@ void defaultlook::on_buttonAbout_clicked()
 void defaultlook::on_buttonHelp_clicked()
 {
     this->hide();
-    QString cmd = QString("mx-viewer http://www.mxlinux.org/wiki/help-files/help-mx-defaultlook '%1'").arg(tr("MX Default Look"));
+    QString cmd = QString("mx-viewer https://mxlinux.org/wiki/help-files/help-mx-default-look '%1'").arg(tr("MX Default Look"));
     system(cmd.toUtf8());
     this->show();
 }
