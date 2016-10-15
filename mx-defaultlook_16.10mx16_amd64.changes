@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Mon, 10 Oct 2016 20:33:25 -0500
+Source: mx-defaultlook
+Binary: mx-defaultlook
+Architecture: source amd64
+Version: 16.10mx16
+Distribution: mx
+Urgency: medium
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Changed-By: dolphin <dolphinoracle@gmail.com>
+Description:
+ mx-defaultlook - MX Default Look
+Changes:
+ mx-defaultlook (16.10mx16) mx; urgency=medium
+ .
+   * initial release
+Checksums-Sha1:
+ 2451aeb420385ff3594ed58ca0c99b47c1295c88 652 mx-defaultlook_16.10mx16.dsc
+ e2528befb9a65e1183ab5fb2bb09949facb697b6 25188 mx-defaultlook_16.10mx16.tar.xz
+ 12bfc405359b571cfc31dd237a8793249b2b6456 38782 mx-defaultlook_16.10mx16_amd64.deb
+Checksums-Sha256:
+ 0762755ff3b611e68db2084a78b1b7ec3974dd3994aee970aab2a4d81f2dde41 652 mx-defaultlook_16.10mx16.dsc
+ a16b2599cbb085564a41d94576b4c4c36054da72f6630120159c27685599ccb8 25188 mx-defaultlook_16.10mx16.tar.xz
+ b973209dc908df78266c616ba7eb0430bbdb5b6f0b1f0cac4f985b623dce2e6a 38782 mx-defaultlook_16.10mx16_amd64.deb
+Files:
+ 97ebda09936e712af2fb5d9174def1e0 652 admin optional mx-defaultlook_16.10mx16.dsc
+ ace4f87d22a1645c44b459a96cb54419 25188 admin optional mx-defaultlook_16.10mx16.tar.xz
+ 4742ed996bd9a01a5756495e29340f7b 38782 admin optional mx-defaultlook_16.10mx16_amd64.deb
