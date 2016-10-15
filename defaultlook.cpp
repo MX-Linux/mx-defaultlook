@@ -45,6 +45,7 @@ void defaultlook::setup()
 {
     this->setWindowTitle(tr("MX Default Look"));
     this->adjustSize();
+    checkXFCE();
     whichpanel();
     setupuiselections();
 }
@@ -512,3 +513,13 @@ void defaultlook::message()
                              tr("Finished! Firefox may require a restart for changes to take affect"));
 }
 
+void defaultlook::checkXFCE()
+{
+    QString test = runCmd("echo $XDG_CURRENT_DESKTOP").output;
+    qDebug() << test;
+    if ( test != "XFCE") {
+        QMessageBox::information(0, tr("MX Default Looks"),
+                                 tr("This app is XFCE only"));
+        qApp->quit();
+    }
+}
