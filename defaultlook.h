@@ -64,6 +64,7 @@ public:
     void fliptovertical();
     void whichpanel();
     void message();
+    void checkXFCE();
 
 public slots:
 
