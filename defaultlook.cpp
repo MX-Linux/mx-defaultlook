@@ -418,9 +418,9 @@ void defaultlook::on_buttonApply_clicked()
 
             QFileInfo theme("/usr/share/themes/Adwaita-Xfce Dark");
             if (theme.exists()) {
-                runCmd("xfconf-query -c xsettings -p /Net/ThemeName -s 'Adwaita-Xfce Dark'");
+                runCmd("xfconf-query -c xsettings -p /Net/ThemeName -s 'Adwaita-Xfce-Dark-Thick'");
                 runCmd("sleep .5");
-                runCmd("xfconf-query -c xfwm4 -p /general/theme -s 'Adwaita-Xfce Dark'");
+                runCmd("xfconf-query -c xfwm4 -p /general/theme -s 'Adwaita-Xfce-Dark-Thick'");
                 runCmd("sleep .5");
                 QFileInfo icon("/usr/share/icons/Papirus-Dark-GTK");
                 if (icon.exists()) {
