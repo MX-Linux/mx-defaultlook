@@ -416,7 +416,7 @@ void defaultlook::on_buttonApply_clicked()
 
         if (ui->checkDarkTheme->isChecked()) {
 
-            QFileInfo theme("/usr/share/themes/Adwaita-Xfce Dark");
+            QFileInfo theme("/usr/share/themes/Adwaita-Xfce-Dark-Thick");
             if (theme.exists()) {
                 runCmd("xfconf-query -c xsettings -p /Net/ThemeName -s 'Adwaita-Xfce-Dark-Thick'");
                 runCmd("sleep .5");
