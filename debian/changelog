@@ -1,3 +1,9 @@
+mx-defaultlook (16.10mx16+2) mx; urgency=medium
+
+  * incorporating new default dark theme name
+ 
+ -- dolphin <dolphinoracle@gmail.com>  Tue, 18 Oct 2016 18:45:25 -0500
+
 mx-defaultlook (16.10mx16+1) mx; urgency=medium
 
   * incorporating new default dark theme name
