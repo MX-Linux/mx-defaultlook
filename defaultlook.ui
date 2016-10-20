@@ -191,7 +191,7 @@
          <string>Quit application</string>
         </property>
         <property name="text">
-         <string>Cancel</string>
+         <string>Close</string>
         </property>
         <property name="icon">
          <iconset>
@@ -237,7 +237,7 @@
      <x>0</x>
      <y>0</y>
      <width>478</width>
-     <height>21</height>
+     <height>25</height>
     </rect>
    </property>
   </widget>
