@@ -433,9 +433,9 @@ void defaultlook::on_buttonApply_clicked()
         if (ui->checkLightTheme->isChecked()) {
             QFileInfo theme("/usr/share/themes/Greybird-thick-grip");
             if (theme.exists()) {
-                runCmd("xfconf-query -c xsettings -p /Net/ThemeName -s Greybird-thick-grip");
+                runCmd("xfconf-query -c xsettings -p /Net/ThemeName -s Greybird-mx16-thick-grip");
                 runCmd("sleep .5");
-                runCmd("xfconf-query -c xfwm4 -p /general/theme -s Greybird-thick-grip");
+                runCmd("xfconf-query -c xfwm4 -p /general/theme -s Greybird-mx16-thick-grip");
                 runCmd("sleep .5");
                 QFileInfo icon("/usr/share/icons/Papirus-GTK");
                 if (icon.exists()) {
