@@ -2,7 +2,7 @@ Format: 3.0 (native)
 Source: mx-defaultlook
 Binary: mx-defaultlook
 Architecture: any
-Version: 16.10mx16+3
+Version: 16.10mx16+4
 Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
 Standards-Version: 3.9.5
 Vcs-Git: git://github.com/mxlinux/mx-defaultlook.git
@@ -10,8 +10,8 @@ Build-Depends: qt5-qmake, debhelper (>= 7.0.50~)
 Package-List:
  mx-defaultlook deb admin optional arch=any
 Checksums-Sha1:
- ae1709cff17984080cb3138e54558e88d86217e4 25260 mx-defaultlook_16.10mx16+3.tar.xz
+ 51d10e5ae02061ffd49b929d3007ed9ea9615c32 25260 mx-defaultlook_16.10mx16+4.tar.xz
 Checksums-Sha256:
- dd2e36a1cfbf0d2aa24ffb9bf07fbfc6b4ea49378eebf8c9769152be09202b69 25260 mx-defaultlook_16.10mx16+3.tar.xz
+ dec6358a1969e76b44215edbb82b38174fd59c19216367527cdc0db47b913634 25260 mx-defaultlook_16.10mx16+4.tar.xz
 Files:
- 350dc1777921a0a7b8fdd5def27b5c1f 25260 mx-defaultlook_16.10mx16+3.tar.xz
+ 557694bcae8075dc5368b0d9d973b98f 25260 mx-defaultlook_16.10mx16+4.tar.xz
