@@ -427,6 +427,9 @@ void defaultlook::on_buttonApply_clicked()
                     runCmd("xfconf-query -c xsettings -p /Net/IconThemeName -s 'Papirus-Dark-GTK'");
                     runCmd("sleep .5");
                 }
+                //restart xfce4-panel
+
+                system("xfce4-panel -r");
             }
         }
 
@@ -442,7 +445,9 @@ void defaultlook::on_buttonApply_clicked()
                     runCmd("xfconf-query -c xsettings -p /Net/IconThemeName -s 'Papirus-GTK'");
                     runCmd("sleep .5");
                 }
-                //ui->checkFirefox->setChecked(false);
+                //restart xfce4-panel
+
+                system("xfce4-panel -r");
             }
         }
         if (ui->checkFirefox->isChecked()) {
@@ -510,7 +515,7 @@ void defaultlook::on_buttonHelp_clicked()
 void defaultlook::message()
 {
     QMessageBox::information(0, tr("MX Default Looks"),
-                             tr("Finished! Firefox may require a restart for changes to take affect"));
+                             tr("Finished! Firefox may require a restart for changes to take effect"));
 }
 
 void defaultlook::checkXFCE()
