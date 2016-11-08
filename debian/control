@@ -9,6 +9,6 @@ Vcs-Git: git://github.com/mxlinux/mx-defaultlook.git
 
 Package: mx-defaultlook
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}, mx-viewer
+Depends: ${misc:Depends}, ${shlibs:Depends}, mx-viewer, papirus-gtk-icon-theme, mx-adwaita-dark-xfce-themes, mx-greybird-themes 
 Description: MX Default Look
  MX Default Look is a tool for quick default appearance settings in MX Linux

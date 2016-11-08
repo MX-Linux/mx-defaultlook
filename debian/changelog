@@ -1,3 +1,9 @@
+mx-defaultlook (16.11mx16) mx; urgency=medium
+
+  * adjusted depends to include themes
+ 
+ -- dolphin <dolphinoracle@gmail.com>  Mon, 07 Nov 2016 21:45:25 -0500
+
 mx-defaultlook (16.10mx16+5) mx; urgency=medium
 
   * translations
