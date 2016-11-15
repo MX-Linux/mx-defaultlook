@@ -43,7 +43,7 @@
     <message>
         <location filename="../defaultlook.ui" line="80"/>
         <source>Fix some website fields when using dark theme</source>
-        <translation>Esmeneu alguns camps dels llocs web usant el tema fosc</translation>
+        <translation>Esmena alguns camps dels llocs web usant el tema fosc</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="83"/>

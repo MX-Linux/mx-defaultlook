@@ -8,7 +8,7 @@
         <location filename="../defaultlook.cpp" line="501"/>
         <location filename="../defaultlook.cpp" line="510"/>
         <source>MX Default Look</source>
-        <translation type="unfinished"/>
+        <translation>MX 標準の外見</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="32"/>
@@ -23,17 +23,17 @@
     <message>
         <location filename="../defaultlook.ui" line="52"/>
         <source>Display panel horizontally</source>
-        <translation type="unfinished"/>
+        <translation>パネル表示を水平にする</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="59"/>
         <source>Default light theme</source>
-        <translation type="unfinished"/>
+        <translation>標準ライトテーマ</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="66"/>
         <source>Display panel vertically</source>
-        <translation type="unfinished"/>
+        <translation>パネル表示を垂直にする</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="73"/>
@@ -43,12 +43,12 @@
     <message>
         <location filename="../defaultlook.ui" line="80"/>
         <source>Fix some website fields when using dark theme</source>
-        <translation type="unfinished"/>
+        <translation>ダークテーマを使用する場合、Web サイトのフィールドに反映される事があります</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="83"/>
         <source>Firefox dark theme tweak</source>
-        <translation type="unfinished"/>
+        <translation>Firefox ダークテーマ tweak</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="165"/>
@@ -83,7 +83,7 @@
     <message>
         <location filename="../defaultlook.cpp" line="493"/>
         <source>About MX Default Look</source>
-        <translation type="unfinished"/>
+        <translation>MX 標準の外観について</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="494"/>
@@ -93,7 +93,7 @@
     <message>
         <location filename="../defaultlook.cpp" line="495"/>
         <source>App for quick default ui theme changes</source>
-        <translation type="unfinished"/>
+        <translation>標準 UI テーマの変更を容易に行うアプリ</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="497"/>
@@ -115,12 +115,12 @@
         <location filename="../defaultlook.cpp" line="517"/>
         <location filename="../defaultlook.cpp" line="526"/>
         <source>MX Default Looks</source>
-        <translation type="unfinished"/>
+        <translation>MX 標準の外見</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="518"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
-        <translation type="unfinished"/>
+        <translation>完了しました！Firefox では変更を有効にするため再起動が必要な場合があります</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="527"/>

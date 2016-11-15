@@ -8,7 +8,7 @@
         <location filename="../defaultlook.cpp" line="501"/>
         <location filename="../defaultlook.cpp" line="510"/>
         <source>MX Default Look</source>
-        <translation>MX_Aparência pré-definida do MX</translation>
+        <translation>MX_Pré-definição da Aparência do MX</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="32"/>
