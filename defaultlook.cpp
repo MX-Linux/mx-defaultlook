@@ -242,10 +242,13 @@ void defaultlook::fliptohorizontal()
         runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + tasklistID + "/show-labels -s true");
     }
 
+    //move to bottom per mx-16 defaults
+
+    runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel + "/position -s $(xfconf-query -c xfce4-panel -p /panels/panel-" + panel + "/position |sed s/p=./p=8/)");
+
     //restart xfce4-panel
 
-    system("xfce4-panel -r");
-
+    runCmd("xfce4-panel -r");
 }
 
 void defaultlook::fliptovertical()
