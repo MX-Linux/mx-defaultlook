@@ -8,47 +8,47 @@
         <location filename="../defaultlook.cpp" line="501"/>
         <location filename="../defaultlook.cpp" line="510"/>
         <source>MX Default Look</source>
-        <translation type="unfinished"/>
+        <translation>MX Aspecto por Defecto</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="32"/>
         <source>Panel Options</source>
-        <translation type="unfinished"/>
+        <translation>Opciones de panel</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="45"/>
         <source>Theme Options</source>
-        <translation type="unfinished"/>
+        <translation>Opciones de Tema</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="52"/>
         <source>Display panel horizontally</source>
-        <translation type="unfinished"/>
+        <translation>Desplegar panel horizontalmente</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="59"/>
         <source>Default light theme</source>
-        <translation type="unfinished"/>
+        <translation>Tema claro por defecto</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="66"/>
         <source>Display panel vertically</source>
-        <translation type="unfinished"/>
+        <translation>Desplegar panel vertical</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="73"/>
         <source>Default dark theme</source>
-        <translation type="unfinished"/>
+        <translation>Tema oscura por defecto</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="80"/>
         <source>Fix some website fields when using dark theme</source>
-        <translation type="unfinished"/>
+        <translation>Corregir campos en paginas web cuando usa tema oscura</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="83"/>
         <source>Firefox dark theme tweak</source>
-        <translation type="unfinished"/>
+        <translation>Retocar tema oscuro de Firefox</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="165"/>
@@ -83,7 +83,7 @@
     <message>
         <location filename="../defaultlook.cpp" line="493"/>
         <source>About MX Default Look</source>
-        <translation type="unfinished"/>
+        <translation>Acerca MX Vista por defecto</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="494"/>
@@ -93,7 +93,7 @@
     <message>
         <location filename="../defaultlook.cpp" line="495"/>
         <source>App for quick default ui theme changes</source>
-        <translation type="unfinished"/>
+        <translation>Ap para cambios rápidos a la tema IU por defecto</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="497"/>
@@ -115,17 +115,17 @@
         <location filename="../defaultlook.cpp" line="517"/>
         <location filename="../defaultlook.cpp" line="526"/>
         <source>MX Default Looks</source>
-        <translation type="unfinished"/>
+        <translation>MX Aspectos por defecto</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="518"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
-        <translation type="unfinished"/>
+        <translation>Listo! Firefox puede requerir un reinicio para que los cambios surtan efecto. </translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="527"/>
         <source>This app is XFCE only</source>
-        <translation type="unfinished"/>
+        <translation>Este es solamente para XFCE</translation>
     </message>
 </context>
 </TS>

@@ -43,7 +43,7 @@
     <message>
         <location filename="../defaultlook.ui" line="80"/>
         <source>Fix some website fields when using dark theme</source>
-        <translation>Arranger des champs d&apos;un site web pendant qu&apos;on se sert d&apos;un theme foncé</translation>
+        <translation>Règle des problèmes de champs de remplissage dans Firefox quand le thème foncé est sélectionné</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="83"/>
@@ -93,7 +93,7 @@
     <message>
         <location filename="../defaultlook.cpp" line="495"/>
         <source>App for quick default ui theme changes</source>
-        <translation>Application pour fair des changements rapides au théme d&apos;interface utilisateur par défaut</translation>
+        <translation>Application pour faire des changements de thèmes  rapides par défaut</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="497"/>
@@ -120,12 +120,12 @@
     <message>
         <location filename="../defaultlook.cpp" line="518"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
-        <translation>Fini! Il se peut que les changements ne s&apos;effectueront pas à moins que vous ne lanciez de nouveau Firefox</translation>
+        <translation>Terminé ! Il se peut que vous deviez redémarrer Firefox pour que les changements prennent effet</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="527"/>
         <source>This app is XFCE only</source>
-        <translation>Cette application ne regarde que XFCE</translation>
+        <translation>Cette application ne concerne que le bureau XFCE.</translation>
     </message>
 </context>
 </TS>
