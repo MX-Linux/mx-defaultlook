@@ -114,7 +114,7 @@
     <message>
         <location filename="../defaultlook.cpp" line="517"/>
         <location filename="../defaultlook.cpp" line="526"/>
-        <source>MX Default Looks</source>
+        <source>MX Default Look</source>
         <translation>MX Apparences par défaut</translation>
     </message>
     <message>
@@ -124,8 +124,8 @@
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="527"/>
-        <source>This app is XFCE only</source>
-        <translation>Cette application ne concerne que le bureau XFCE.</translation>
+        <source>This app is Xfce-only</source>
+        <translation>Cette application ne concerne que le bureau Xfce.</translation>
     </message>
 </context>
 </TS>

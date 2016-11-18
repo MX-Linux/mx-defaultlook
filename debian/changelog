@@ -1,3 +1,9 @@
+mx-defaultlook (16.11mx16+2) mx; urgency=medium
+
+* language edits
+
+ -- dolphinoracle <dolphinoracle@gmail.com>  Fri, 18 Nov 2016 09:27:33 -0400
+
 mx-defaultlook (16.11mx16+1) mx; urgency=medium
 
 * horizontal panel on bottom, locale issue fixed
