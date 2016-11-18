@@ -517,7 +517,7 @@ void defaultlook::on_buttonHelp_clicked()
 
 void defaultlook::message()
 {
-    QMessageBox::information(0, tr("MX Default Looks"),
+    QMessageBox::information(0, tr("MX Default Look"),
                              tr("Finished! Firefox may require a restart for changes to take effect"));
 }
 
@@ -527,7 +527,7 @@ void defaultlook::checkXFCE()
     qDebug() << test;
     if ( test != "XFCE") {
         QMessageBox::information(0, tr("MX Default Looks"),
-                                 tr("This app is XFCE only"));
+                                 tr("This app is Xfce-only"));
         qApp->quit();
     }
 }
