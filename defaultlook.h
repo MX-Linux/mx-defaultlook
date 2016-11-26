@@ -86,6 +86,12 @@ private slots:
 
 
 
+    void on_checkHorz_clicked();
+
+    void on_checkVert_clicked();
+
+    void on_checkFirefox_clicked();
+
 private:
     Ui::defaultlook *ui;
 };
