@@ -45,6 +45,7 @@ void defaultlook::setup()
 {
     this->setWindowTitle(tr("MX Default Look"));
     this->adjustSize();
+    ui->buttonApply->setEnabled(false);
     checkXFCE();
     whichpanel();
     setupuiselections();
@@ -405,6 +406,7 @@ void defaultlook::fliptovertical()
 //Apply Button
 void defaultlook::on_buttonApply_clicked()
 {
+    ui->buttonApply->setEnabled(false);
     {
         //read in plugin ID's
         if (ui->checkHorz->isChecked()) {
@@ -471,6 +473,7 @@ void defaultlook::on_buttonApply_clicked()
 
 void defaultlook::on_checkLightTheme_clicked()
 {
+    ui->buttonApply->setEnabled(true);
     if (ui->checkLightTheme->isChecked()) {
         ui->checkDarkTheme->setChecked(false);
         ui->checkFirefox->setChecked(false);
@@ -479,6 +482,7 @@ void defaultlook::on_checkLightTheme_clicked()
 
 void defaultlook::on_checkDarkTheme_clicked()
 {
+    ui->buttonApply->setEnabled(true);
     if (ui->checkDarkTheme->isChecked()) {
         ui->checkLightTheme->setChecked(false);
     }
@@ -530,4 +534,19 @@ void defaultlook::checkXFCE()
                                  tr("This app is Xfce-only"));
         qApp->quit();
     }
+}
+
+void defaultlook::on_checkHorz_clicked()
+{
+    ui->buttonApply->setEnabled(true);
+}
+
+void defaultlook::on_checkVert_clicked()
+{
+    ui->buttonApply->setEnabled(true);
+}
+
+void defaultlook::on_checkFirefox_clicked()
+{
+    ui->buttonApply->setEnabled(true);
 }
