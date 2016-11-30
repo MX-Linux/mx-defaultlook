@@ -530,7 +530,7 @@ void defaultlook::checkXFCE()
     QString test = runCmd("echo $XDG_CURRENT_DESKTOP").output;
     qDebug() << test;
     if ( test != "XFCE") {
-        QMessageBox::information(0, tr("MX Default Looks"),
+        QMessageBox::information(0, tr("MX Default Look"),
                                  tr("This app is Xfce-only"));
         qApp->quit();
     }

@@ -4,9 +4,11 @@
     <message>
         <location filename="../defaultlook.ui" line="14"/>
         <location filename="../defaultlook.cpp" line="46"/>
-        <location filename="../defaultlook.cpp" line="494"/>
         <location filename="../defaultlook.cpp" line="501"/>
-        <location filename="../defaultlook.cpp" line="510"/>
+        <location filename="../defaultlook.cpp" line="508"/>
+        <location filename="../defaultlook.cpp" line="517"/>
+        <location filename="../defaultlook.cpp" line="524"/>
+        <location filename="../defaultlook.cpp" line="533"/>
         <source>MX Default Look</source>
         <translation>MX Apparence par défaut</translation>
     </message>
@@ -23,7 +25,7 @@
     <message>
         <location filename="../defaultlook.ui" line="52"/>
         <source>Display panel horizontally</source>
-        <translation>Montrer le panneau à l&apos;horizontale</translation>
+        <translation>Afficher le panneau à l&apos;horizontale</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="59"/>
@@ -33,12 +35,12 @@
     <message>
         <location filename="../defaultlook.ui" line="66"/>
         <source>Display panel vertically</source>
-        <translation>Montrer le panneau à la verticale</translation>
+        <translation>Afficher le panneau à la verticale</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="73"/>
         <source>Default dark theme</source>
-        <translation>Thème foncé par défaut</translation>
+        <translation>Thème sombre par défaut</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="80"/>
@@ -48,7 +50,7 @@
     <message>
         <location filename="../defaultlook.ui" line="83"/>
         <source>Firefox dark theme tweak</source>
-        <translation>Peaufinage du thème foncé Firefox</translation>
+        <translation>Ajustements du thème sombre dans Firefox</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="165"/>
@@ -81,51 +83,45 @@
         <translation>Aide </translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="493"/>
+        <location filename="../defaultlook.cpp" line="500"/>
         <source>About MX Default Look</source>
         <translation>À propos de MX Apparence par défaut</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="494"/>
+        <location filename="../defaultlook.cpp" line="501"/>
         <source>Version: </source>
         <translation>Version: </translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="495"/>
+        <location filename="../defaultlook.cpp" line="502"/>
         <source>App for quick default ui theme changes</source>
-        <translation>Application pour faire des changements de thèmes  rapides par défaut</translation>
+        <translation>Application permettant des modifications rapides de thèmes par défaut</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="497"/>
+        <location filename="../defaultlook.cpp" line="504"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Copyright (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="498"/>
+        <location filename="../defaultlook.cpp" line="505"/>
         <source>Cancel</source>
         <translation>Annuler</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="499"/>
-        <location filename="../defaultlook.cpp" line="501"/>
+        <location filename="../defaultlook.cpp" line="506"/>
+        <location filename="../defaultlook.cpp" line="508"/>
         <source>License</source>
         <translation>Licence</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="517"/>
-        <location filename="../defaultlook.cpp" line="526"/>
-        <source>MX Default Look</source>
-        <translation>MX Apparences par défaut</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.cpp" line="518"/>
+        <location filename="../defaultlook.cpp" line="525"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
         <translation>Terminé ! Il se peut que vous deviez redémarrer Firefox pour que les changements prennent effet</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="527"/>
+        <location filename="../defaultlook.cpp" line="534"/>
         <source>This app is Xfce-only</source>
-        <translation>Cette application ne concerne que le bureau Xfce.</translation>
+        <translation>Cette application ne concerne que le bureau Xfce</translation>
     </message>
 </context>
 </TS>
