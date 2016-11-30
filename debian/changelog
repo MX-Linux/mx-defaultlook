@@ -1,3 +1,9 @@
+mx-defaultlook (16.11mx16+4) mx; urgency=medium
+
+* removed icon set dependency
+
+ -- dolphinoracle <dolphinoracle@gmail.com>  Tue, 29 Nov 2016 19:05:33 -0400
+
 mx-defaultlook (16.11mx16+3) mx; urgency=medium
 
 * changed behavior of apply button to disable after activation
