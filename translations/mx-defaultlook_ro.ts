@@ -4,9 +4,11 @@
     <message>
         <location filename="../defaultlook.ui" line="14"/>
         <location filename="../defaultlook.cpp" line="46"/>
-        <location filename="../defaultlook.cpp" line="494"/>
         <location filename="../defaultlook.cpp" line="501"/>
-        <location filename="../defaultlook.cpp" line="510"/>
+        <location filename="../defaultlook.cpp" line="508"/>
+        <location filename="../defaultlook.cpp" line="517"/>
+        <location filename="../defaultlook.cpp" line="524"/>
+        <location filename="../defaultlook.cpp" line="533"/>
         <source>MX Default Look</source>
         <translation type="unfinished"/>
     </message>
@@ -81,49 +83,43 @@
         <translation>Ajutor</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="493"/>
+        <location filename="../defaultlook.cpp" line="500"/>
         <source>About MX Default Look</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="494"/>
+        <location filename="../defaultlook.cpp" line="501"/>
         <source>Version: </source>
         <translation>Versiune:</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="495"/>
+        <location filename="../defaultlook.cpp" line="502"/>
         <source>App for quick default ui theme changes</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="497"/>
+        <location filename="../defaultlook.cpp" line="504"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Copyright (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="498"/>
+        <location filename="../defaultlook.cpp" line="505"/>
         <source>Cancel</source>
         <translation>Anulează</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="499"/>
-        <location filename="../defaultlook.cpp" line="501"/>
+        <location filename="../defaultlook.cpp" line="506"/>
+        <location filename="../defaultlook.cpp" line="508"/>
         <source>License</source>
         <translation>Licență</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="517"/>
-        <location filename="../defaultlook.cpp" line="526"/>
-        <source>MX Default Look</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../defaultlook.cpp" line="518"/>
+        <location filename="../defaultlook.cpp" line="525"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="527"/>
+        <location filename="../defaultlook.cpp" line="534"/>
         <source>This app is Xfce-only</source>
         <translation type="unfinished"/>
     </message>

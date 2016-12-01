@@ -4,9 +4,11 @@
     <message>
         <location filename="../defaultlook.ui" line="14"/>
         <location filename="../defaultlook.cpp" line="46"/>
-        <location filename="../defaultlook.cpp" line="494"/>
         <location filename="../defaultlook.cpp" line="501"/>
-        <location filename="../defaultlook.cpp" line="510"/>
+        <location filename="../defaultlook.cpp" line="508"/>
+        <location filename="../defaultlook.cpp" line="517"/>
+        <location filename="../defaultlook.cpp" line="524"/>
+        <location filename="../defaultlook.cpp" line="533"/>
         <source>MX Default Look</source>
         <translation>MX Aspecto por Defecto</translation>
     </message>
@@ -38,12 +40,12 @@
     <message>
         <location filename="../defaultlook.ui" line="73"/>
         <source>Default dark theme</source>
-        <translation>Tema oscura por defecto</translation>
+        <translation>Tema oscuro por defecto</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="80"/>
         <source>Fix some website fields when using dark theme</source>
-        <translation>Corregir campos en paginas web cuando usa tema oscura</translation>
+        <translation>Corregir campos en páginas web cuando usa el tema oscuro</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="83"/>
@@ -81,51 +83,45 @@
         <translation>Ayuda</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="493"/>
+        <location filename="../defaultlook.cpp" line="500"/>
         <source>About MX Default Look</source>
-        <translation>Acerca MX Vista por defecto</translation>
+        <translation>Acerca MX Aspecto por defecto</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="494"/>
+        <location filename="../defaultlook.cpp" line="501"/>
         <source>Version: </source>
         <translation>Versión:</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="495"/>
+        <location filename="../defaultlook.cpp" line="502"/>
         <source>App for quick default ui theme changes</source>
-        <translation>Ap para cambios rápidos a la tema IU por defecto</translation>
+        <translation>Ap para cambios rápidos al tema de la IU por defecto</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="497"/>
+        <location filename="../defaultlook.cpp" line="504"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Copyright (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="498"/>
+        <location filename="../defaultlook.cpp" line="505"/>
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="499"/>
-        <location filename="../defaultlook.cpp" line="501"/>
+        <location filename="../defaultlook.cpp" line="506"/>
+        <location filename="../defaultlook.cpp" line="508"/>
         <source>License</source>
         <translation>Licencia</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="517"/>
-        <location filename="../defaultlook.cpp" line="526"/>
-        <source>MX Default Look</source>
-        <translation>MX Aspectos por defecto</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.cpp" line="518"/>
+        <location filename="../defaultlook.cpp" line="525"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
-        <translation>Listo! Firefox puede requerir un reinicio para que los cambios surtan efecto. </translation>
+        <translation>¡Listo! Firefox puede requerir un reinicio para que los cambios surtan efecto. </translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="527"/>
+        <location filename="../defaultlook.cpp" line="534"/>
         <source>This app is Xfce-only</source>
-        <translation>Este es solamente para Xfce</translation>
+        <translation>Esta aplicación es solamente para Xfce</translation>
     </message>
 </context>
 </TS>
