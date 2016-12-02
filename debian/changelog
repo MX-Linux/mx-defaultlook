@@ -1,3 +1,9 @@
+mx-defaultlook (16.12mx16) mx; urgency=medium
+
+* updated translations
+
+ -- dolphinoracle <dolphinoracle@gmail.com>  Thu, 01 Dec 2016 19:05:33 -0400
+
 mx-defaultlook (16.11mx16+4) mx; urgency=medium
 
 * removed icon set dependency
