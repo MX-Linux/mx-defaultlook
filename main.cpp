@@ -23,10 +23,23 @@
  **********************************************************************/
 #include "defaultlook.h"
 #include <QApplication>
+#include <unistd.h>
+#include <QApplication>
+#include <QTranslator>
+#include <QLocale>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+
+    QTranslator qtTran;
+    qtTran.load(QString("qt_") + QLocale::system().name());
+    a.installTranslator(&qtTran);
+
+    QTranslator appTran;
+    appTran.load(QString("mx-defaultlook_") + QLocale::system().name(), "/usr/share/mx-defaultlook/locale");
+    a.installTranslator(&appTran);
+
     defaultlook w;
     w.show();
 
