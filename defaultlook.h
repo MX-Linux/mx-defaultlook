@@ -92,6 +92,8 @@ private slots:
 
     void on_checkFirefox_clicked();
 
+    void on_checkHexchat_clicked();
+
 private:
     Ui::defaultlook *ui;
 };
