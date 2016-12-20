@@ -446,6 +446,7 @@ void defaultlook::on_buttonApply_clicked()
 
             system("xfce4-panel -r");
         }
+
     }
 
     if (ui->checkLightTheme->isChecked()) {
@@ -472,9 +473,9 @@ void defaultlook::on_buttonApply_clicked()
     }
 
     //deal with hexchat
+    QString home_path = QDir::homePath();
+    QFileInfo file_hexchat(home_path + "/.config/hexchat/hexchat.conf");
     if (ui->checkHexchat->isChecked()) {
-        QString home_path = QDir::homePath();
-        QFileInfo file_hexchat(home_path + "/.config/hexchat/hexchat.conf");
         if (file_hexchat.exists()) {
             //replace setting
             runCmd("sed -i -r 's/gui_input_style = 1/gui_input_style = 0/' " + file_hexchat.absoluteFilePath());
@@ -483,8 +484,13 @@ void defaultlook::on_buttonApply_clicked()
             runCmd("mkdir -p " + home_path + "/.config/hexchat");
             runCmd("cp /usr/share/mx-defaultlook/hexchat.conf " + file_hexchat.absoluteFilePath());
         }
-
+      } else {
+        if (file_hexchat.exists()) {
+            //replace setting
+            runCmd("sed -i -r 's/gui_input_style = 0/gui_input_style = 1/' " + file_hexchat.absoluteFilePath());
+        }
     }
+
     // message that we are done
     message();
 
@@ -499,6 +505,7 @@ void defaultlook::on_checkLightTheme_clicked()
     if (ui->checkLightTheme->isChecked()) {
         ui->checkDarkTheme->setChecked(false);
         ui->checkFirefox->setChecked(false);
+        ui->checkHexchat->setChecked(false);
     }
 }
 
@@ -507,6 +514,8 @@ void defaultlook::on_checkDarkTheme_clicked()
     ui->buttonApply->setEnabled(true);
     if (ui->checkDarkTheme->isChecked()) {
         ui->checkLightTheme->setChecked(false);
+        ui->checkHexchat->setChecked(true);
+        ui->checkFirefox->setChecked(true);
     }
 }
 

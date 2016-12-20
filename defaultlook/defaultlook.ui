@@ -232,7 +232,7 @@
     <item row="4" column="1">
      <widget class="QCheckBox" name="checkHexchat">
       <property name="text">
-       <string>HexChat dark tweak</string>
+       <string>Fix Hexchat input box in dark theme</string>
       </property>
      </widget>
     </item>
