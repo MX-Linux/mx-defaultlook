@@ -75,6 +75,7 @@ void defaultlook::setupuiselections()
     ui->checkLightTheme->setChecked(false);
     ui->checkDarkTheme->setChecked(false);
     ui->checkFirefox->setChecked(false);
+    ui->checkHexchat->setChecked(false);
 
     //only enable options that make sense
 
@@ -104,7 +105,16 @@ void defaultlook::setupuiselections()
     if (file.exists()) {
         ui->checkFirefox->setChecked(true);
     }
-
+    //check status of hex chat dark tweak
+    QFileInfo file_hexchat(home_path + "/.config/hexchat/hexchat.conf");
+    if (file_hexchat.exists()) {
+        //check for absolutePath()setting
+       QString code = runCmd("grep 'gui_input_style = 0' " + file_hexchat.absoluteFilePath()).output;
+        qDebug() << "hexchat command :" << code;
+        if (code == "gui_input_style = 0") {
+            ui->checkHexchat->setChecked(true);
+        }
+    }
 }
 
 void defaultlook::whichpanel()
@@ -407,61 +417,80 @@ void defaultlook::fliptovertical()
 void defaultlook::on_buttonApply_clicked()
 {
     ui->buttonApply->setEnabled(false);
-    {
-        //read in plugin ID's
-        if (ui->checkHorz->isChecked()) {
-            fliptohorizontal();
+
+    //read in plugin ID's
+    if (ui->checkHorz->isChecked()) {
+        fliptohorizontal();
+        runCmd("sleep .5");
+    }
+
+    if (ui->checkVert->isChecked()) {
+        fliptovertical();
+        runCmd("sleep .5");
+    }
+
+    if (ui->checkDarkTheme->isChecked()) {
+
+        QFileInfo theme("/usr/share/themes/Adwaita-Xfce-Dark-Thick");
+        if (theme.exists()) {
+            runCmd("xfconf-query -c xsettings -p /Net/ThemeName -s 'Adwaita-Xfce-Dark-Thick'");
             runCmd("sleep .5");
-        }
-
-        if (ui->checkVert->isChecked()) {
-            fliptovertical();
+            runCmd("xfconf-query -c xfwm4 -p /general/theme -s 'Adwaita-Xfce-Dark-Thick'");
             runCmd("sleep .5");
-        }
-
-        if (ui->checkDarkTheme->isChecked()) {
-
-            QFileInfo theme("/usr/share/themes/Adwaita-Xfce-Dark-Thick");
-            if (theme.exists()) {
-                runCmd("xfconf-query -c xsettings -p /Net/ThemeName -s 'Adwaita-Xfce-Dark-Thick'");
+            QFileInfo icon("/usr/share/icons/Papirus-Dark-GTK");
+            if (icon.exists()) {
+                runCmd("xfconf-query -c xsettings -p /Net/IconThemeName -s 'Papirus-Dark-GTK'");
                 runCmd("sleep .5");
-                runCmd("xfconf-query -c xfwm4 -p /general/theme -s 'Adwaita-Xfce-Dark-Thick'");
-                runCmd("sleep .5");
-                QFileInfo icon("/usr/share/icons/Papirus-Dark-GTK");
-                if (icon.exists()) {
-                    runCmd("xfconf-query -c xsettings -p /Net/IconThemeName -s 'Papirus-Dark-GTK'");
-                    runCmd("sleep .5");
-                }
-                //restart xfce4-panel
-
-                system("xfce4-panel -r");
             }
-        }
+            //restart xfce4-panel
 
-        if (ui->checkLightTheme->isChecked()) {
-            QFileInfo theme("/usr/share/themes/Greybird-thick-grip");
-            if (theme.exists()) {
-                runCmd("xfconf-query -c xsettings -p /Net/ThemeName -s Greybird-mx16-thick-grip");
-                runCmd("sleep .5");
-                runCmd("xfconf-query -c xfwm4 -p /general/theme -s Greybird-mx16-thick-grip");
-                runCmd("sleep .5");
-                QFileInfo icon("/usr/share/icons/Papirus-GTK");
-                if (icon.exists()) {
-                    runCmd("xfconf-query -c xsettings -p /Net/IconThemeName -s 'Papirus-GTK'");
-                    runCmd("sleep .5");
-                }
-                //restart xfce4-panel
-
-                system("xfce4-panel -r");
-            }
-        }
-        if (ui->checkFirefox->isChecked()) {
-            runCmd("touch /home/$USER/.config/FirefoxDarkThemeOverride.check");
-        } else {
-            runCmd("rm /home/$USER/.config/FirefoxDarkThemeOverride.check");
+            system("xfce4-panel -r");
         }
 
     }
+
+    if (ui->checkLightTheme->isChecked()) {
+        QFileInfo theme("/usr/share/themes/Greybird-thick-grip");
+        if (theme.exists()) {
+            runCmd("xfconf-query -c xsettings -p /Net/ThemeName -s Greybird-mx16-thick-grip");
+            runCmd("sleep .5");
+            runCmd("xfconf-query -c xfwm4 -p /general/theme -s Greybird-mx16-thick-grip");
+            runCmd("sleep .5");
+            QFileInfo icon("/usr/share/icons/Papirus-GTK");
+            if (icon.exists()) {
+                runCmd("xfconf-query -c xsettings -p /Net/IconThemeName -s 'Papirus-GTK'");
+                runCmd("sleep .5");
+            }
+            //restart xfce4-panel
+
+            system("xfce4-panel -r");
+        }
+    }
+    if (ui->checkFirefox->isChecked()) {
+        runCmd("touch /home/$USER/.config/FirefoxDarkThemeOverride.check");
+    } else {
+        runCmd("rm /home/$USER/.config/FirefoxDarkThemeOverride.check");
+    }
+
+    //deal with hexchat
+    QString home_path = QDir::homePath();
+    QFileInfo file_hexchat(home_path + "/.config/hexchat/hexchat.conf");
+    if (ui->checkHexchat->isChecked()) {
+        if (file_hexchat.exists()) {
+            //replace setting
+            runCmd("sed -i -r 's/gui_input_style = 1/gui_input_style = 0/' " + file_hexchat.absoluteFilePath());
+        } else {
+            //copy a config file into user directory
+            runCmd("mkdir -p " + home_path + "/.config/hexchat");
+            runCmd("cp /usr/share/mx-defaultlook/hexchat.conf " + file_hexchat.absoluteFilePath());
+        }
+      } else {
+        if (file_hexchat.exists()) {
+            //replace setting
+            runCmd("sed -i -r 's/gui_input_style = 0/gui_input_style = 1/' " + file_hexchat.absoluteFilePath());
+        }
+    }
+
     // message that we are done
     message();
 
@@ -470,13 +499,13 @@ void defaultlook::on_buttonApply_clicked()
 
 }
 
-
 void defaultlook::on_checkLightTheme_clicked()
 {
     ui->buttonApply->setEnabled(true);
     if (ui->checkLightTheme->isChecked()) {
         ui->checkDarkTheme->setChecked(false);
         ui->checkFirefox->setChecked(false);
+        ui->checkHexchat->setChecked(false);
     }
 }
 
@@ -485,6 +514,8 @@ void defaultlook::on_checkDarkTheme_clicked()
     ui->buttonApply->setEnabled(true);
     if (ui->checkDarkTheme->isChecked()) {
         ui->checkLightTheme->setChecked(false);
+        ui->checkHexchat->setChecked(true);
+        ui->checkFirefox->setChecked(true);
     }
 }
 
@@ -547,6 +578,11 @@ void defaultlook::on_checkVert_clicked()
 }
 
 void defaultlook::on_checkFirefox_clicked()
+{
+    ui->buttonApply->setEnabled(true);
+}
+
+void defaultlook::on_checkHexchat_clicked()
 {
     ui->buttonApply->setEnabled(true);
 }
