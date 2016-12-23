@@ -1,14 +1,16 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="fr" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="fr">
 <context>
     <name>defaultlook</name>
     <message>
         <location filename="../defaultlook.ui" line="14"/>
         <location filename="../defaultlook.cpp" line="46"/>
-        <location filename="../defaultlook.cpp" line="501"/>
-        <location filename="../defaultlook.cpp" line="508"/>
-        <location filename="../defaultlook.cpp" line="517"/>
-        <location filename="../defaultlook.cpp" line="524"/>
-        <location filename="../defaultlook.cpp" line="533"/>
+        <location filename="../defaultlook.cpp" line="532"/>
+        <location filename="../defaultlook.cpp" line="539"/>
+        <location filename="../defaultlook.cpp" line="548"/>
+        <location filename="../defaultlook.cpp" line="555"/>
+        <location filename="../defaultlook.cpp" line="564"/>
         <source>MX Default Look</source>
         <translation>MX Apparence par défaut</translation>
     </message>
@@ -83,43 +85,48 @@
         <translation>Aide </translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="500"/>
+        <location filename="../defaultlook.ui" line="235"/>
+        <source>Fix HexChat input box in dark theme</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.cpp" line="531"/>
         <source>About MX Default Look</source>
         <translation>À propos de MX Apparence par défaut</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="501"/>
+        <location filename="../defaultlook.cpp" line="532"/>
         <source>Version: </source>
         <translation>Version: </translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="502"/>
+        <location filename="../defaultlook.cpp" line="533"/>
         <source>App for quick default ui theme changes</source>
         <translation>Application permettant des modifications rapides de thèmes par défaut</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="504"/>
+        <location filename="../defaultlook.cpp" line="535"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Copyright (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="505"/>
+        <location filename="../defaultlook.cpp" line="536"/>
         <source>Cancel</source>
         <translation>Annuler</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="506"/>
-        <location filename="../defaultlook.cpp" line="508"/>
+        <location filename="../defaultlook.cpp" line="537"/>
+        <location filename="../defaultlook.cpp" line="539"/>
         <source>License</source>
         <translation>Licence</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="525"/>
+        <location filename="../defaultlook.cpp" line="556"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
         <translation>Terminé ! Il se peut que vous deviez redémarrer Firefox pour que les changements prennent effet</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="534"/>
+        <location filename="../defaultlook.cpp" line="565"/>
         <source>This app is Xfce-only</source>
         <translation>Cette application ne concerne que le bureau Xfce</translation>
     </message>
