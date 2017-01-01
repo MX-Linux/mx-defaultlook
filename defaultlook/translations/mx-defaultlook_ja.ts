@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="ja">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="ja" version="2.1">
 <context>
     <name>defaultlook</name>
     <message>
@@ -27,22 +25,22 @@
     <message>
         <location filename="../defaultlook.ui" line="52"/>
         <source>Display panel horizontally</source>
-        <translation>パネル表示を水平にする</translation>
+        <translation>パネル表示を横にする</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="59"/>
         <source>Default light theme</source>
-        <translation>標準ライトテーマ</translation>
+        <translation>初期状態のライトテーマ</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="66"/>
         <source>Display panel vertically</source>
-        <translation>パネル表示を垂直にする</translation>
+        <translation>パネル表示を縦にする</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="73"/>
         <source>Default dark theme</source>
-        <translation>デフォルトダークテーマ</translation>
+        <translation>初期状態のダークテーマ</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="80"/>
@@ -87,7 +85,7 @@
     <message>
         <location filename="../defaultlook.ui" line="235"/>
         <source>Fix HexChat input box in dark theme</source>
-        <translation type="unfinished"></translation>
+        <translation>ダークテーマ使用時の HexChat 入力ボックスを修正</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="531"/>
@@ -123,7 +121,7 @@
     <message>
         <location filename="../defaultlook.cpp" line="556"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
-        <translation>完了しました！Firefox では変更を有効にするため再起動が必要な場合があります</translation>
+        <translation>完了しました！ Firefox では変更を有効にするため再起動が必要な場合があります</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="565"/>

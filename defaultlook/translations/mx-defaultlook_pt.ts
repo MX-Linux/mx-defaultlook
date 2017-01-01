@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="pt">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="pt" version="2.1">
 <context>
     <name>defaultlook</name>
     <message>
@@ -12,12 +10,12 @@
         <location filename="../defaultlook.cpp" line="555"/>
         <location filename="../defaultlook.cpp" line="564"/>
         <source>MX Default Look</source>
-        <translation>MX_Pré-definição da Aparência do MX</translation>
+        <translation>MX_Aparência do MX</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="32"/>
         <source>Panel Options</source>
-        <translation>OPções de painel</translation>
+        <translation>Opções de painel</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="45"/>
@@ -47,7 +45,7 @@
     <message>
         <location filename="../defaultlook.ui" line="80"/>
         <source>Fix some website fields when using dark theme</source>
-        <translation>Adaptar alguns campos de website quando com tema escuro</translation>
+        <translation>Adaptar alguns campos de website a tema escuro</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="83"/>
@@ -87,12 +85,12 @@
     <message>
         <location filename="../defaultlook.ui" line="235"/>
         <source>Fix HexChat input box in dark theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Adaptar a caixa do HexChat quando em tema escuro</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="531"/>
         <source>About MX Default Look</source>
-        <translation>Sobre o MX_Aparência pré-definida do MX</translation>
+        <translation>Sobre o MX_Aparência do MX</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="532"/>
@@ -102,7 +100,7 @@
     <message>
         <location filename="../defaultlook.cpp" line="533"/>
         <source>App for quick default ui theme changes</source>
-        <translation>Aplicação para rapidamente fazer alteraçãoes à interface (UI) pré-definida</translation>
+        <translation>Aplicação para alterar as definições da  interface (UI) do MX</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="535"/>
