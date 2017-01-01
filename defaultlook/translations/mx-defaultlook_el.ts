@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="el">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="el" version="2.1">
 <context>
     <name>defaultlook</name>
     <message>
@@ -87,7 +85,7 @@
     <message>
         <location filename="../defaultlook.ui" line="235"/>
         <source>Fix HexChat input box in dark theme</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="531"/>

@@ -27,6 +27,7 @@ TRANSLATIONS += translations/mx-defaultlook_ca.ts \
                 translations/mx-defaultlook_it.ts \
                 translations/mx-defaultlook_ja.ts \
                 translations/mx-defaultlook_kk.ts \
+                translations/mx-defaultlook_lt.ts \
                 translations/mx-defaultlook_nl.ts \
                 translations/mx-defaultlook_pl.ts \
                 translations/mx-defaultlook_pt.ts \
