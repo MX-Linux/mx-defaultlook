@@ -85,7 +85,7 @@
     <message>
         <location filename="../defaultlook.ui" line="235"/>
         <source>Fix HexChat input box in dark theme</source>
-        <translation type="unfinished"/>
+        <translation>Διόρθωση πλαίσιο εισαγωγής HexChat στο σκοτεινό θέμα</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="531"/>

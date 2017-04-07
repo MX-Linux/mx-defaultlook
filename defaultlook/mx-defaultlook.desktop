@@ -2,6 +2,7 @@
 Encoding=UTF-8
 Name=MX Default Look
 Name[ca]=MX Default Look
+Name[cs]=MX převolený Vzhled
 Name[de]=MX Standardansicht
 Name[el]=MX Default Look
 Name[es]=MX Vista por defecto
@@ -15,6 +16,7 @@ Name[ru]=MX Вид по умолчанию
 Name[sv]=MX Standard-utseende
 Comment=Quick changes to default look
 Comment[ca]=Canvis ràpids a l'aspecte per omissió
+Comment[cs]=Rychlé změny v předvoleném vzhledu
 Comment[de]=Schnelles Ändern des Standardansichts
 Comment[el]=Γρήγορες αλλαγές στην προεπιλεγμένη εμφάνιση
 Comment[es]=Cambios rápidos a la vista por defecto
