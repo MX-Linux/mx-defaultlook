@@ -20,6 +20,7 @@ HEADERS  += defaultlook.h
 FORMS    += defaultlook.ui
 
 TRANSLATIONS += translations/mx-defaultlook_ca.ts \
+                translations/mx-defaultlook_cs.ts \
                 translations/mx-defaultlook_de.ts \
                 translations/mx-defaultlook_el.ts \
                 translations/mx-defaultlook_es.ts \
@@ -33,5 +34,6 @@ TRANSLATIONS += translations/mx-defaultlook_ca.ts \
                 translations/mx-defaultlook_pt.ts \
                 translations/mx-defaultlook_ro.ts \
                 translations/mx-defaultlook_ru.ts \
+                translations/mx-defaultlook_sk.ts \
                 translations/mx-defaultlook_sv.ts \
                 translations/mx-defaultlook_tr.ts
