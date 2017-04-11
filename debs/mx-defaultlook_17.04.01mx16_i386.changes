@@ -1,0 +1,22 @@
+Format: 1.8
+Date: Mon, 10 Apr 2017 17:15:17 -0500
+Source: mx-defaultlook
+Binary: mx-defaultlook
+Architecture: i386
+Version: 17.04.01mx16
+Distribution: mx
+Urgency: medium
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Changed-By: dolphinoracle <dolphinoracle@gmail.com>
+Description:
+ mx-defaultlook - MX Default Look
+Changes:
+ mx-defaultlook (17.04.01mx16) mx; urgency=medium
+ .
+   * refreshed translations
+Checksums-Sha1:
+ edfbcb349df5902fe5585b56d5dfc837905b2891 51866 mx-defaultlook_17.04.01mx16_i386.deb
+Checksums-Sha256:
+ 6f4f3f7ceccec33dfbcf7aba633bdb47fde66baddc5947b875305cb010ea1b3d 51866 mx-defaultlook_17.04.01mx16_i386.deb
+Files:
+ 6485b958d463e8b2c78312f447db3b7f 51866 admin optional mx-defaultlook_17.04.01mx16_i386.deb
