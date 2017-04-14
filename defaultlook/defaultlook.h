@@ -66,6 +66,14 @@ public:
     void message();
     void checkXFCE();
 
+    void backupPanel();
+    void restoreDefaultPanel();
+    void restoreBackup();
+
+    void top_or_bottom();
+    void message2();
+
+
 public slots:
 
 
@@ -84,7 +92,11 @@ private slots:
 
     void on_buttonHelp_clicked();
 
+    void on_radioDefaultPanel_clicked();
 
+    void on_radioBackupPanel_clicked();
+
+    void on_radioRestoreBackup_clicked();
 
     void on_checkHorz_clicked();
 
@@ -93,6 +105,12 @@ private slots:
     void on_checkFirefox_clicked();
 
     void on_checkHexchat_clicked();
+
+    void on_toolButtonXFCEpanelSettings_clicked();
+
+    void on_toolButtonXFCEAppearance_clicked();
+
+    void on_toolButtonXFCEWMsettings_clicked();
 
 private:
     Ui::defaultlook *ui;

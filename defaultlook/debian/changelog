@@ -1,3 +1,11 @@
+mx-defaultlook (17.04.02mx16) mx; urgency=medium
+
+  * merged functions of mx-panel-orientation and mx-defaultlook
+  * added shortcuts to xfce settings apps
+  * modifed backup/restore routines
+
+ -- dolphinoracle <dolphinoracle@gmail.com>  Fri, 14 Apr 2017 13:49:17 -0500
+
 mx-defaultlook (17.04.01mx16) mx; urgency=medium
 
   * refreshed translations
