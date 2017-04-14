@@ -1,0 +1,30 @@
+Format: 1.8
+Date: Fri, 14 Apr 2017 13:49:17 -0500
+Source: mx-defaultlook
+Binary: mx-defaultlook
+Architecture: source amd64
+Version: 17.04.02mx16
+Distribution: mx
+Urgency: medium
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Changed-By: dolphinoracle <dolphinoracle@gmail.com>
+Description:
+ mx-defaultlook - MX Default Look
+Changes:
+ mx-defaultlook (17.04.02mx16) mx; urgency=medium
+ .
+   * merged functions of mx-panel-orientation and mx-defaultlook
+   * added shortcuts to xfce settings apps
+   * modifed backup/restore routines
+Checksums-Sha1:
+ d2ed018ce48f1d953bdc453b9b4b64a2d5076cfd 664 mx-defaultlook_17.04.02mx16.dsc
+ 6c3d89f609434bd7796defaa1a8d874643fb15af 39220 mx-defaultlook_17.04.02mx16.tar.xz
+ 7ec4ad733142eecd96536289b91681586d3ff4be 54602 mx-defaultlook_17.04.02mx16_amd64.deb
+Checksums-Sha256:
+ 6c75d1d67da6ad8c995b5835a7c514af35e28c1a66575e95b532988a2a0e2328 664 mx-defaultlook_17.04.02mx16.dsc
+ 1b1e2265ce56ac6fe080cd8624a0610a96ca274f519430a380461039fa81283a 39220 mx-defaultlook_17.04.02mx16.tar.xz
+ e7a7015594886a403eabbc09e77786ec43b2242cf6ca220dd97f4499bad1421b 54602 mx-defaultlook_17.04.02mx16_amd64.deb
+Files:
+ 4858d666c681fd890a07c90db641a456 664 admin optional mx-defaultlook_17.04.02mx16.dsc
+ 3373cd1242949750c3d86d975fe3d04a 39220 admin optional mx-defaultlook_17.04.02mx16.tar.xz
+ f259914319e0251cf8df95f89f206546 54602 admin optional mx-defaultlook_17.04.02mx16_amd64.deb
