@@ -17,8 +17,8 @@ Changes:
    * added shortcuts to xfce settings apps
    * modifed backup/restore routines
 Checksums-Sha1:
- a90738fe053ed6519bfbda786e36a8b29467f1e5 55926 mx-defaultlook_17.04.02mx16_i386.deb
+ ce185cdceae32ef7ef8a96b23b17a818f2acfaac 56076 mx-defaultlook_17.04.02mx16_i386.deb
 Checksums-Sha256:
- 7229a3845bd88b585c4a4aa20d07cf70f31e3fcbc5404aeabd28e20be8d8d84c 55926 mx-defaultlook_17.04.02mx16_i386.deb
+ 02a251d137c6ea58be20f77a2f236c2871e0e175ec2606af38b60de9e3aaf9bf 56076 mx-defaultlook_17.04.02mx16_i386.deb
 Files:
- 4bfe7e0a7ed9d0de8e158082d66f2a1b 55926 admin optional mx-defaultlook_17.04.02mx16_i386.deb
+ 0d34d47880e254317b24e1dd97799019 56076 admin optional mx-defaultlook_17.04.02mx16_i386.deb

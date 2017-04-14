@@ -56,6 +56,7 @@ public:
     QString version;
     QString output;
     QString panel;
+    bool message_flag;
 
 
     void setup();

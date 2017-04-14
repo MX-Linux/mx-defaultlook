@@ -48,6 +48,7 @@ void defaultlook::setup()
     ui->buttonApply->setEnabled(false);
     checkXFCE();
     whichpanel();
+    message_flag = false;
     QString cmd = QString("test -f ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml");
     if (system(cmd.toUtf8()) != 0) {
         backupPanel();
@@ -467,7 +468,7 @@ void defaultlook::on_buttonApply_clicked()
     }
 
     if (ui->checkDarkTheme->isChecked()) {
-
+        message_flag = true;
         QFileInfo theme("/usr/share/themes/Adwaita-Xfce-Dark-Thick");
         if (theme.exists()) {
             runCmd("xfconf-query -c xsettings -p /Net/ThemeName -s 'Adwaita-Xfce-Dark-Thick'");
@@ -487,6 +488,7 @@ void defaultlook::on_buttonApply_clicked()
     }
 
     if (ui->checkLightTheme->isChecked()) {
+        message_flag = true;
         QFileInfo theme("/usr/share/themes/Greybird-thick-grip");
         if (theme.exists()) {
             runCmd("xfconf-query -c xsettings -p /Net/ThemeName -s Greybird-mx16-thick-grip");
@@ -530,8 +532,12 @@ void defaultlook::on_buttonApply_clicked()
     }
 
 
-    // message that we are done
-    message();
+    // message that we are done if a theme change was made
+
+    if (message_flag == true) {
+        message();
+        message_flag = false;
+    }
 
     // reset gui
     setupuiselections();
@@ -663,6 +669,7 @@ void defaultlook::on_checkVert_clicked()
 void defaultlook::on_checkFirefox_clicked()
 {
     ui->buttonApply->setEnabled(true);
+    message_flag = true;
 }
 
 void defaultlook::on_checkHexchat_clicked()
