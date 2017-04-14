@@ -17,14 +17,14 @@ Changes:
    * added shortcuts to xfce settings apps
    * modifed backup/restore routines
 Checksums-Sha1:
- d2ed018ce48f1d953bdc453b9b4b64a2d5076cfd 664 mx-defaultlook_17.04.02mx16.dsc
- 6c3d89f609434bd7796defaa1a8d874643fb15af 39220 mx-defaultlook_17.04.02mx16.tar.xz
- 7ec4ad733142eecd96536289b91681586d3ff4be 54602 mx-defaultlook_17.04.02mx16_amd64.deb
+ 750edde08b727a21e234a62c82816cf7f4318326 664 mx-defaultlook_17.04.02mx16.dsc
+ 49e5f37342b5d9ad8056ddc629d4398bee3b584d 39240 mx-defaultlook_17.04.02mx16.tar.xz
+ cde801e8987a34bf62c0bf06d50374db6075aa3c 55502 mx-defaultlook_17.04.02mx16_amd64.deb
 Checksums-Sha256:
- 6c75d1d67da6ad8c995b5835a7c514af35e28c1a66575e95b532988a2a0e2328 664 mx-defaultlook_17.04.02mx16.dsc
- 1b1e2265ce56ac6fe080cd8624a0610a96ca274f519430a380461039fa81283a 39220 mx-defaultlook_17.04.02mx16.tar.xz
- e7a7015594886a403eabbc09e77786ec43b2242cf6ca220dd97f4499bad1421b 54602 mx-defaultlook_17.04.02mx16_amd64.deb
+ eec17679a8e74429fb19e78077d0c4e2b79dea00dc3d0400e3d41ca908f6cbc2 664 mx-defaultlook_17.04.02mx16.dsc
+ 37882e2d8611cf9c1208fb1df74d03d6c9602bb9e2b0bf68ba76b06fd9d4fa15 39240 mx-defaultlook_17.04.02mx16.tar.xz
+ 6aac34019532c1981219e1ee668039dfbd64a78b54be9411670695533e3a1e4e 55502 mx-defaultlook_17.04.02mx16_amd64.deb
 Files:
- 4858d666c681fd890a07c90db641a456 664 admin optional mx-defaultlook_17.04.02mx16.dsc
- 3373cd1242949750c3d86d975fe3d04a 39220 admin optional mx-defaultlook_17.04.02mx16.tar.xz
- f259914319e0251cf8df95f89f206546 54602 admin optional mx-defaultlook_17.04.02mx16_amd64.deb
+ f29b88935f95e5306ee4a1f753e22062 664 admin optional mx-defaultlook_17.04.02mx16.dsc
+ ee30334c1a140f8d9ae6642a5c5248fb 39240 admin optional mx-defaultlook_17.04.02mx16.tar.xz
+ f50a9ebd772b3a671de545878173055a 55502 admin optional mx-defaultlook_17.04.02mx16_amd64.deb

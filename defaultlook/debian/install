@@ -5,4 +5,4 @@ icons/*                 usr/share/mx-defaultlook/icons
 license.html            usr/share/doc/mx-defaultlook
 firefox			usr/local/bin
 hexchat.conf            usr/share/mx-defaultlook
-
+mx-defaultlook.png	usr/share/pixmaps
