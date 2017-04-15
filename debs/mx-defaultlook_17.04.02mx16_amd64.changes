@@ -17,15 +17,16 @@ Changes:
    * added shortcuts to xfce settings apps
    * modifed backup/restore routines
    * enabled top and bottom choice all the time
+   * changed disable function for horz and vertical checkbox to checked or unchecked
 Checksums-Sha1:
- 2a181661f533456b637ee2b512e3054fb023bda6 664 mx-defaultlook_17.04.02mx16.dsc
- 6471ac4325d6bf4c93dd4fa926cb0d0f225b5c57 39396 mx-defaultlook_17.04.02mx16.tar.xz
- eeccf9ad9a83e01951acff96ad81806e22db089c 55804 mx-defaultlook_17.04.02mx16_amd64.deb
+ 8e2e70a69a26c8861d6dd53eedd8d0a50eebaaf9 664 mx-defaultlook_17.04.02mx16.dsc
+ ff0564d09392319bfa3d37e1c889ce00ec55b6ee 39444 mx-defaultlook_17.04.02mx16.tar.xz
+ ff25bf00190d9dc6bc62ac0782d1676bea330642 55994 mx-defaultlook_17.04.02mx16_amd64.deb
 Checksums-Sha256:
- a178152bf236938fde8ff12ddf16cb3f45f2d1ecde09eb9778ee872d1937478b 664 mx-defaultlook_17.04.02mx16.dsc
- 628dcb9acf366a682660867e23fe82da8374e709afbe46394659662863889a72 39396 mx-defaultlook_17.04.02mx16.tar.xz
- 6559793c514be1ec03e3e283366e920b100faf1ba48ecc04653e1338a0271c94 55804 mx-defaultlook_17.04.02mx16_amd64.deb
+ fbba5b7be0f8c4eccdfe21015d91e8a5c24d68dda9ff7f9b8758460f870930f6 664 mx-defaultlook_17.04.02mx16.dsc
+ 4681ad5913b6028557a840fc9756865ce5465b4b43dbcf591bf675abc6b5fde6 39444 mx-defaultlook_17.04.02mx16.tar.xz
+ a09ea20b11feb90f02bd0c5b12b3422b170af957a89a36598680745ea48b8de2 55994 mx-defaultlook_17.04.02mx16_amd64.deb
 Files:
- 70d9b815dee9a2a1aad0588818dd72a3 664 admin optional mx-defaultlook_17.04.02mx16.dsc
- 306fda3e6ef7e6e04fc80cdbf32d2539 39396 admin optional mx-defaultlook_17.04.02mx16.tar.xz
- 3a29e6f1e32a9b0e4b8580640872ce9d 55804 admin optional mx-defaultlook_17.04.02mx16_amd64.deb
+ a445d46dea8603c28a3c73942c5298ac 664 admin optional mx-defaultlook_17.04.02mx16.dsc
+ ae1ebd391237bf28e1354d63fab21c92 39444 admin optional mx-defaultlook_17.04.02mx16.tar.xz
+ 1f4730e177cb8e16d4656f5488b3e2b9 55994 admin optional mx-defaultlook_17.04.02mx16_amd64.deb

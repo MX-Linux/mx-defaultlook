@@ -17,9 +17,10 @@ Changes:
    * added shortcuts to xfce settings apps
    * modifed backup/restore routines
    * enabled top and bottom choice all the time
+   * changed disable function for horz and vertical checkbox to checked or unchecked
 Checksums-Sha1:
- 08f784e14c16789d7556130626bb73d1915d4d07 56334 mx-defaultlook_17.04.02mx16_i386.deb
+ c547045372c685c857c6842c88cdf682549efab9 56748 mx-defaultlook_17.04.02mx16_i386.deb
 Checksums-Sha256:
- be19489d54b9dcb7442675b66c6fce2817764e26538573967648d17407152b03 56334 mx-defaultlook_17.04.02mx16_i386.deb
+ 81351c8aaab805dac83f712bc6d605d9026c5c1b3876e52df04af1254a2500d3 56748 mx-defaultlook_17.04.02mx16_i386.deb
 Files:
- e1549d8312e40dd9dac6065bd4175189 56334 admin optional mx-defaultlook_17.04.02mx16_i386.deb
+ 0451e6507c39db1473a9444de52bc454 56748 admin optional mx-defaultlook_17.04.02mx16_i386.deb

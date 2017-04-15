@@ -94,22 +94,22 @@ void defaultlook::setupuiselections()
 
     if (test == "") {
         ui->checkVert->setEnabled(true);
-        ui->checkHorz->setEnabled(false);
+        ui->checkHorz->setChecked(true);
         ui->comboboxHorzPostition->setEnabled(true);
     }
     if (test == "0") {
         ui->checkVert->setEnabled(true);
-        ui->checkHorz->setEnabled(false);
+        ui->checkHorz->setChecked(true);
         ui->comboboxHorzPostition->setEnabled(true);
     }
     if (test == "1") {
-        ui->checkVert->setEnabled(false);
+        ui->checkVert->setChecked(true);
         ui->checkHorz->setEnabled(true);
         ui->comboboxHorzPostition->setEnabled(true);
     }
 
     if (test == "2") {
-        ui->checkVert->setEnabled(false);
+        ui->checkVert->setChecked(true);
         ui->checkHorz->setEnabled(true);
         ui->comboboxHorzPostition->setEnabled(true);
     }
@@ -279,7 +279,7 @@ void defaultlook::fliptohorizontal()
     //deteremine top or bottom horizontal placement
     top_or_bottom();
 
-    runCmd("xfce4-panel -r");
+    runCmd("xfce4-panel --restart");
 }
 
 void defaultlook::fliptovertical()
@@ -429,7 +429,7 @@ void defaultlook::fliptovertical()
 
     //restart xfce4-panel
 
-    system("xfce4-panel -r");
+    system("xfce4-panel --restart");
 }
 
 //// slots ////
@@ -458,12 +458,22 @@ void defaultlook::on_buttonApply_clicked()
     }
     //read in plugin ID's
     if (ui->checkHorz->isChecked()) {
-        fliptohorizontal();
+        QString test = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel +"/mode").output;
+
+        if (test == "1" || test =="2") {
+            fliptohorizontal();
+        }
+
+
         runCmd("sleep .5");
     }
 
     if (ui->checkVert->isChecked()) {
-        fliptovertical();
+        QString test = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel +"/mode").output;
+
+        if (test == "" || test =="0") {
+            fliptovertical();
+        }
         runCmd("sleep .5");
     }
 
@@ -482,7 +492,7 @@ void defaultlook::on_buttonApply_clicked()
             }
             //restart xfce4-panel
 
-            system("xfce4-panel -r");
+            system("xfce4-panel --restart");
         }
 
     }
@@ -502,7 +512,7 @@ void defaultlook::on_buttonApply_clicked()
             }
             //restart xfce4-panel
 
-            system("xfce4-panel -r");
+            system("xfce4-panel --restart");
         }
     }
 
@@ -631,14 +641,14 @@ void defaultlook::restoreDefaultPanel()
     // copy template files
     runCmd("pkill xfconfd; rm -Rf ~/.config/xfce4/panel; cp -Rf /usr/local/share/appdata/panels/vertical/panel ~/.config/xfce4; \
            cp -f /usr/local/share/appdata/panels/vertical/xfce4-panel.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml; \
-             xfconfd; sleep 2; xfce4-panel -r");
+             xfconfd; sleep 2; xfce4-panel --restart");
 }
 
 void defaultlook::restoreBackup()
 {
     runCmd("pkill xfconfd; rm -Rf ~/.config/xfce4/panel; cp -Rf ~/.restore/.config/xfce4/panel ~/.config/xfce4; \
            cp -f ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml; \
-            xfconfd; sleep 2; xfce4-panel -r");
+            xfconfd; sleep 2; xfce4-panel --restart");
 }
 
 void defaultlook::on_checkHorz_clicked()
@@ -763,7 +773,7 @@ void defaultlook::on_comboboxHorzPostition_currentIndexChanged(const QString &ar
 {
     qDebug() << "top or bottom output " << ui->comboboxHorzPostition->currentText();
     QString test = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel +"/mode").output;
-    qDebug() << "test value, blank or 1 runs top_or_bottom" << test;
+    qDebug() << "test value, blank or 0 runs top_or_bottom" << test;
     if (test == "") {
         top_or_bottom();
     }
