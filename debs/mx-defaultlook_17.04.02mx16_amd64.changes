@@ -19,14 +19,14 @@ Changes:
    * enabled top and bottom choice all the time
    * changed disable function for horz and vertical checkbox to checked or unchecked
 Checksums-Sha1:
- 8e2e70a69a26c8861d6dd53eedd8d0a50eebaaf9 664 mx-defaultlook_17.04.02mx16.dsc
- ff0564d09392319bfa3d37e1c889ce00ec55b6ee 39444 mx-defaultlook_17.04.02mx16.tar.xz
- ff25bf00190d9dc6bc62ac0782d1676bea330642 55994 mx-defaultlook_17.04.02mx16_amd64.deb
+ 3c5b744e096b965fd7c6e73e55c230ba7e206560 664 mx-defaultlook_17.04.02mx16.dsc
+ c52598fd24482f9e1121577e27fb89146a12f96b 39516 mx-defaultlook_17.04.02mx16.tar.xz
+ 4f71465a8bcd180b409ac9838bdab509d2a2ac49 56382 mx-defaultlook_17.04.02mx16_amd64.deb
 Checksums-Sha256:
- fbba5b7be0f8c4eccdfe21015d91e8a5c24d68dda9ff7f9b8758460f870930f6 664 mx-defaultlook_17.04.02mx16.dsc
- 4681ad5913b6028557a840fc9756865ce5465b4b43dbcf591bf675abc6b5fde6 39444 mx-defaultlook_17.04.02mx16.tar.xz
- a09ea20b11feb90f02bd0c5b12b3422b170af957a89a36598680745ea48b8de2 55994 mx-defaultlook_17.04.02mx16_amd64.deb
+ ea71816a017174e355370b9a45a8e8b35f9831d2d0a2397a63244725c8f9801d 664 mx-defaultlook_17.04.02mx16.dsc
+ 1322bcafaf2867e58dd5dc88edad118b91585abc6630d1986c601ed3090df864 39516 mx-defaultlook_17.04.02mx16.tar.xz
+ 019c63476b4d979de5b39063a56d34bc987a6991c9f7bb3037a2e43537dd32fb 56382 mx-defaultlook_17.04.02mx16_amd64.deb
 Files:
- a445d46dea8603c28a3c73942c5298ac 664 admin optional mx-defaultlook_17.04.02mx16.dsc
- ae1ebd391237bf28e1354d63fab21c92 39444 admin optional mx-defaultlook_17.04.02mx16.tar.xz
- 1f4730e177cb8e16d4656f5488b3e2b9 55994 admin optional mx-defaultlook_17.04.02mx16_amd64.deb
+ c7912830e51e2c77c08abe849407623e 664 admin optional mx-defaultlook_17.04.02mx16.dsc
+ f60b7b132a2e9b430033da1d6d29be3e 39516 admin optional mx-defaultlook_17.04.02mx16.tar.xz
+ a1f7adc127c066b4dea10a4d2d82658c 56382 admin optional mx-defaultlook_17.04.02mx16_amd64.deb

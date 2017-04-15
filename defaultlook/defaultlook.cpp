@@ -88,30 +88,24 @@ void defaultlook::setupuiselections()
 
     //only enable options that make sense
 
-    //if panel is already horizontal, set vertical option available, and vice versa
+    //if panel is already horizontal, set vertical option available, and vice versa  "" and "0" are horizontal
 
     QString test = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel +"/mode").output;
+     QString test2 = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel + "/position").output.section(";", 0,0);
+    qDebug() << "test2" << test2;
 
-    if (test == "") {
+    if (test == "" || test == "0") {
         ui->checkVert->setEnabled(true);
         ui->checkHorz->setChecked(true);
-        ui->comboboxHorzPostition->setEnabled(true);
-    }
-    if (test == "0") {
-        ui->checkVert->setEnabled(true);
-        ui->checkHorz->setChecked(true);
-        ui->comboboxHorzPostition->setEnabled(true);
-    }
-    if (test == "1") {
-        ui->checkVert->setChecked(true);
-        ui->checkHorz->setEnabled(true);
-        ui->comboboxHorzPostition->setEnabled(true);
+        if (test2 == "p=11" || test2 == "p=6" || test2 == "p=2") {
+            ui->comboboxHorzPostition->setCurrentIndex(1);
+        }
+
     }
 
-    if (test == "2") {
+    if (test == "1" || test == "2") {
         ui->checkVert->setChecked(true);
         ui->checkHorz->setEnabled(true);
-        ui->comboboxHorzPostition->setEnabled(true);
     }
 
     // if backup available, make the restore backup option available
