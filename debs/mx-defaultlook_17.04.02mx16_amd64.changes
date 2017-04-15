@@ -16,15 +16,16 @@ Changes:
    * merged functions of mx-panel-orientation and mx-defaultlook
    * added shortcuts to xfce settings apps
    * modifed backup/restore routines
+   * enabled top and bottom choice all the time
 Checksums-Sha1:
- 0b9476caac5c7aeb15e29861ec765b77cfa6da63 664 mx-defaultlook_17.04.02mx16.dsc
- f02d716a2b8346034dd8c9de579ce4ce1b5dfb05 39292 mx-defaultlook_17.04.02mx16.tar.xz
- 40c37cf5bd359fc8230c27b9cae19cc4a94a223c 55596 mx-defaultlook_17.04.02mx16_amd64.deb
+ 2a181661f533456b637ee2b512e3054fb023bda6 664 mx-defaultlook_17.04.02mx16.dsc
+ 6471ac4325d6bf4c93dd4fa926cb0d0f225b5c57 39396 mx-defaultlook_17.04.02mx16.tar.xz
+ eeccf9ad9a83e01951acff96ad81806e22db089c 55804 mx-defaultlook_17.04.02mx16_amd64.deb
 Checksums-Sha256:
- 8a1a78a9563900bbbac5e9236a366b74963597122f8847c3a4f6e6490826371c 664 mx-defaultlook_17.04.02mx16.dsc
- b07fae16edc6861d8b9685e52f3858235e2fbd2292b37c906104a1d5459470ae 39292 mx-defaultlook_17.04.02mx16.tar.xz
- 55f131ecdbe324b47a8aa6303ae1c0319c3d2c3ca5d25641518f27189f07dd90 55596 mx-defaultlook_17.04.02mx16_amd64.deb
+ a178152bf236938fde8ff12ddf16cb3f45f2d1ecde09eb9778ee872d1937478b 664 mx-defaultlook_17.04.02mx16.dsc
+ 628dcb9acf366a682660867e23fe82da8374e709afbe46394659662863889a72 39396 mx-defaultlook_17.04.02mx16.tar.xz
+ 6559793c514be1ec03e3e283366e920b100faf1ba48ecc04653e1338a0271c94 55804 mx-defaultlook_17.04.02mx16_amd64.deb
 Files:
- 7741e99bc98b69cf5849ee9aef6c5cc4 664 admin optional mx-defaultlook_17.04.02mx16.dsc
- 3f5452b6cba9d78660c12c076080af59 39292 admin optional mx-defaultlook_17.04.02mx16.tar.xz
- 2e06915630d11184a4746c944317dac9 55596 admin optional mx-defaultlook_17.04.02mx16_amd64.deb
+ 70d9b815dee9a2a1aad0588818dd72a3 664 admin optional mx-defaultlook_17.04.02mx16.dsc
+ 306fda3e6ef7e6e04fc80cdbf32d2539 39396 admin optional mx-defaultlook_17.04.02mx16.tar.xz
+ 3a29e6f1e32a9b0e4b8580640872ce9d 55804 admin optional mx-defaultlook_17.04.02mx16_amd64.deb

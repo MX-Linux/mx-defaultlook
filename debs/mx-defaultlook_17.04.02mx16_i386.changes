@@ -16,9 +16,10 @@ Changes:
    * merged functions of mx-panel-orientation and mx-defaultlook
    * added shortcuts to xfce settings apps
    * modifed backup/restore routines
+   * enabled top and bottom choice all the time
 Checksums-Sha1:
- ce185cdceae32ef7ef8a96b23b17a818f2acfaac 56076 mx-defaultlook_17.04.02mx16_i386.deb
+ 08f784e14c16789d7556130626bb73d1915d4d07 56334 mx-defaultlook_17.04.02mx16_i386.deb
 Checksums-Sha256:
- 02a251d137c6ea58be20f77a2f236c2871e0e175ec2606af38b60de9e3aaf9bf 56076 mx-defaultlook_17.04.02mx16_i386.deb
+ be19489d54b9dcb7442675b66c6fce2817764e26538573967648d17407152b03 56334 mx-defaultlook_17.04.02mx16_i386.deb
 Files:
- 0d34d47880e254317b24e1dd97799019 56076 admin optional mx-defaultlook_17.04.02mx16_i386.deb
+ e1549d8312e40dd9dac6065bd4175189 56334 admin optional mx-defaultlook_17.04.02mx16_i386.deb

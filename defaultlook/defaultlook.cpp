@@ -74,7 +74,7 @@ Result defaultlook::runCmd(QString cmd)
 
 void defaultlook::setupuiselections()
 {
-    //reset all radio buttons to unchecked
+    //reset all checkboxes to unchecked
 
     ui->checkVert->setChecked(false);
     ui->checkHorz->setChecked(false);
@@ -95,12 +95,12 @@ void defaultlook::setupuiselections()
     if (test == "") {
         ui->checkVert->setEnabled(true);
         ui->checkHorz->setEnabled(false);
-        ui->comboboxHorzPostition->setEnabled(false);
+        ui->comboboxHorzPostition->setEnabled(true);
     }
     if (test == "0") {
         ui->checkVert->setEnabled(true);
         ui->checkHorz->setEnabled(false);
-        ui->comboboxHorzPostition->setEnabled(false);
+        ui->comboboxHorzPostition->setEnabled(true);
     }
     if (test == "1") {
         ui->checkVert->setEnabled(false);
@@ -757,4 +757,17 @@ void defaultlook::on_toolButtonXFCEWMsettings_clicked()
     this->hide();
     system("xfwm4-settings");
     this->show();
+}
+
+void defaultlook::on_comboboxHorzPostition_currentIndexChanged(const QString &arg1)
+{
+    qDebug() << "top or bottom output " << ui->comboboxHorzPostition->currentText();
+    QString test = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel +"/mode").output;
+    qDebug() << "test value, blank or 1 runs top_or_bottom" << test;
+    if (test == "") {
+        top_or_bottom();
+    }
+    if (test == "0") {
+        top_or_bottom();
+    }
 }

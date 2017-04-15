@@ -113,6 +113,8 @@ private slots:
 
     void on_toolButtonXFCEWMsettings_clicked();
 
+    void on_comboboxHorzPostition_currentIndexChanged(const QString &arg1);
+
 private:
     Ui::defaultlook *ui;
 };
