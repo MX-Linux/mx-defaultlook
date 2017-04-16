@@ -10,8 +10,8 @@ Build-Depends: qt5-qmake, debhelper (>= 7.0.50~)
 Package-List:
  mx-defaultlook deb admin optional arch=any
 Checksums-Sha1:
- c52598fd24482f9e1121577e27fb89146a12f96b 39516 mx-defaultlook_17.04.02mx16.tar.xz
+ f8fec0e571247d88aa4f6b29faf7974f813bbfbd 53592 mx-defaultlook_17.04.02mx16.tar.xz
 Checksums-Sha256:
- 1322bcafaf2867e58dd5dc88edad118b91585abc6630d1986c601ed3090df864 39516 mx-defaultlook_17.04.02mx16.tar.xz
+ 98997490405b0ec441a710dabe328fa8d1932e5533b2c6441460433263e7ac36 53592 mx-defaultlook_17.04.02mx16.tar.xz
 Files:
- f60b7b132a2e9b430033da1d6d29be3e 39516 mx-defaultlook_17.04.02mx16.tar.xz
+ 784633f279c66342bd0f4fb69cc5f286 53592 mx-defaultlook_17.04.02mx16.tar.xz

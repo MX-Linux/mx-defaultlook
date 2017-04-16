@@ -18,9 +18,10 @@ Changes:
    * modifed backup/restore routines
    * enabled top and bottom choice all the time
    * changed disable function for horz and vertical checkbox to checked or unchecked
+   * fixed hide of main settings panel when "Panel" settings is launched
 Checksums-Sha1:
- 69d6d2412ecf5e0086523587ad8af69c49610612 57178 mx-defaultlook_17.04.02mx16_i386.deb
+ 373b1170ae72701e487ada1f70af74255ce53913 59410 mx-defaultlook_17.04.02mx16_i386.deb
 Checksums-Sha256:
- 90e40afd5f951720aa0b9efd6d250ac7f9eead27551292725545a5e0bc6b4f4f 57178 mx-defaultlook_17.04.02mx16_i386.deb
+ dac89612813818b28151295550156c36627c21c2ff8f448427eebe5470b33399 59410 mx-defaultlook_17.04.02mx16_i386.deb
 Files:
- d064a949ee9bd5ab2e38f15711173224 57178 admin optional mx-defaultlook_17.04.02mx16_i386.deb
+ cc52cd71463ef89f201b7d1861471ce1 59410 admin optional mx-defaultlook_17.04.02mx16_i386.deb
