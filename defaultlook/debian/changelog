@@ -5,6 +5,7 @@ mx-defaultlook (17.04.02mx16) mx; urgency=medium
   * modifed backup/restore routines
   * enabled top and bottom choice all the time
   * changed disable function for horz and vertical checkbox to checked or unchecked
+  * fixed hide of main settings panel when "Panel" settings is launched
 
  -- dolphinoracle <dolphinoracle@gmail.com>  Fri, 14 Apr 2017 13:49:17 -0500
 

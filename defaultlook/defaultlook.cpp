@@ -746,7 +746,9 @@ void defaultlook::on_toolButtonXFCEpanelSettings_clicked()
 {
     this->hide();
     system("xfce4-panel --preferences");
+    system("xprop -spy -name Panel");
     this->show();
+    setupuiselections();
 }
 
 void defaultlook::on_toolButtonXFCEAppearance_clicked()
