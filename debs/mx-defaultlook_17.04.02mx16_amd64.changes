@@ -20,14 +20,14 @@ Changes:
    * changed disable function for horz and vertical checkbox to checked or unchecked
    * fixed hide of main settings panel when "Panel" settings is launched
 Checksums-Sha1:
- fd7f65b18888257bac8952141bdb83e606b9a0c2 664 mx-defaultlook_17.04.02mx16.dsc
- f8fec0e571247d88aa4f6b29faf7974f813bbfbd 53592 mx-defaultlook_17.04.02mx16.tar.xz
- f59f2ebb3bfd581d437aa2ba8be97ea1bd55dae7 58466 mx-defaultlook_17.04.02mx16_amd64.deb
+ e014b3b77b07c3b0d5f8542da3a147eccfa173ac 664 mx-defaultlook_17.04.02mx16.dsc
+ 1afc96a025a3606f86417651087cce6741162666 90640 mx-defaultlook_17.04.02mx16.tar.xz
+ 02b3667c35c40fe2c1b9b72d138641700cda1918 58586 mx-defaultlook_17.04.02mx16_amd64.deb
 Checksums-Sha256:
- c20eadb74f2340c27a5a96761ca4c6d0b2fa51133a44f30c9fd1070baed92e4b 664 mx-defaultlook_17.04.02mx16.dsc
- 98997490405b0ec441a710dabe328fa8d1932e5533b2c6441460433263e7ac36 53592 mx-defaultlook_17.04.02mx16.tar.xz
- e865d58f673f908cd7d04b7dc24e887a1eae490d96a0db66ae50543d587680fc 58466 mx-defaultlook_17.04.02mx16_amd64.deb
+ 9dc0c696ba816e73210d30e62fa0ea2510f1fe0cc0b6ef3c9fa083b210838913 664 mx-defaultlook_17.04.02mx16.dsc
+ 123d44f095670a67b903c306d55d9ff9fc7956c5a4befdef6e6de0e17cb10e78 90640 mx-defaultlook_17.04.02mx16.tar.xz
+ 7acba9a9d3b41a0ea252e1355136f88fcdc17e563633321050caa59d961e25f3 58586 mx-defaultlook_17.04.02mx16_amd64.deb
 Files:
- 0e8395c31906e67bafc5284a5282687d 664 admin optional mx-defaultlook_17.04.02mx16.dsc
- 784633f279c66342bd0f4fb69cc5f286 53592 admin optional mx-defaultlook_17.04.02mx16.tar.xz
- 187a3377ab08bc1caecfcb7cfaf1c9be 58466 admin optional mx-defaultlook_17.04.02mx16_amd64.deb
+ 8048debe820be6db88522c2e00f54067 664 admin optional mx-defaultlook_17.04.02mx16.dsc
+ 6eb17155a8ddd475227a73ebb0014f84 90640 admin optional mx-defaultlook_17.04.02mx16.tar.xz
+ 822174d709b9efc99cd9974e390b53c5 58586 admin optional mx-defaultlook_17.04.02mx16_amd64.deb

@@ -20,8 +20,8 @@ Changes:
    * changed disable function for horz and vertical checkbox to checked or unchecked
    * fixed hide of main settings panel when "Panel" settings is launched
 Checksums-Sha1:
- 373b1170ae72701e487ada1f70af74255ce53913 59410 mx-defaultlook_17.04.02mx16_i386.deb
+ 621bdfe924216103edf1303fdd507b7e88f1e2e5 59376 mx-defaultlook_17.04.02mx16_i386.deb
 Checksums-Sha256:
- dac89612813818b28151295550156c36627c21c2ff8f448427eebe5470b33399 59410 mx-defaultlook_17.04.02mx16_i386.deb
+ 6c3d71d9b0d1824816d907fec644ee8c5a00386b765bbc6841bda90228448ff7 59376 mx-defaultlook_17.04.02mx16_i386.deb
 Files:
- cc52cd71463ef89f201b7d1861471ce1 59410 admin optional mx-defaultlook_17.04.02mx16_i386.deb
+ 4418ae56a33631bb1a610a3ed3b7cc25 59376 admin optional mx-defaultlook_17.04.02mx16_i386.deb
