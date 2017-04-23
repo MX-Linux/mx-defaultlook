@@ -1,5 +1,5 @@
 mx-defaultlook	 		 usr/bin
-mx-defaultlook.desktop	 usr/share/applications/mx
+mx-defaultlook.desktop	 usr/share/applications
 translations/*.qm 	 usr/share/mx-defaultlook/locale
 icons/*                 usr/share/mx-defaultlook/icons
 license.html            usr/share/doc/mx-defaultlook

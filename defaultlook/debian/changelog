@@ -6,8 +6,9 @@ mx-defaultlook (17.04.02mx16) mx; urgency=medium
   * enabled top and bottom choice all the time
   * changed disable function for horz and vertical checkbox to checked or unchecked
   * fixed hide of main settings panel when "Panel" settings is launched
+  * changed location of desktop file
 
- -- dolphinoracle <dolphinoracle@gmail.com>  Fri, 14 Apr 2017 13:49:17 -0500
+ -- dolphinoracle <dolphinoracle@gmail.com>  Sat, 22 Apr 2017 13:49:17 -0500
 
 mx-defaultlook (17.04.01mx16) mx; urgency=medium
 
