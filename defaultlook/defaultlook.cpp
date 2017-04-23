@@ -510,6 +510,25 @@ void defaultlook::on_buttonApply_clicked()
         }
     }
 
+    if (ui->checkMX161Light->isChecked()) {
+        message_flag = true;
+        QFileInfo theme("/usr/share/themes/Greybird-thick-grip");
+        if (theme.exists()) {
+            runCmd("xfconf-query -c xsettings -p /Net/ThemeName -s Greybird-mx16-thick-grip");
+            runCmd("sleep .5");
+            runCmd("xfconf-query -c xfwm4 -p /general/theme -s Albatross");
+            runCmd("sleep .5");
+            QFileInfo icon("/usr/share/icons/Papirus-GTK");
+            if (icon.exists()) {
+                runCmd("xfconf-query -c xsettings -p /Net/IconThemeName -s 'Papirus-GTK'");
+                runCmd("sleep .5");
+            }
+            //restart xfce4-panel
+
+            system("xfce4-panel --restart");
+        }
+    }
+
     if (ui->checkFirefox->isChecked()) {
         runCmd("touch /home/$USER/.config/FirefoxDarkThemeOverride.check");
     } else {
@@ -555,6 +574,7 @@ void defaultlook::on_checkLightTheme_clicked()
         ui->checkDarkTheme->setChecked(false);
         ui->checkFirefox->setChecked(false);
         ui->checkHexchat->setChecked(false);
+        ui->checkMX161Light->setChecked(false);
     }
 }
 
@@ -565,6 +585,7 @@ void defaultlook::on_checkDarkTheme_clicked()
         ui->checkLightTheme->setChecked(false);
         ui->checkHexchat->setChecked(true);
         ui->checkFirefox->setChecked(true);
+        ui->checkMX161Light->setChecked(false);
     }
 }
 
@@ -775,5 +796,16 @@ void defaultlook::on_comboboxHorzPostition_currentIndexChanged(const QString &ar
     }
     if (test == "0") {
         top_or_bottom();
+    }
+}
+
+void defaultlook::on_checkMX161Light_clicked()
+{
+    ui->buttonApply->setEnabled(true);
+    if (ui->checkMX161Light->isChecked()) {
+        ui->checkLightTheme->setChecked(false);
+        ui->checkDarkTheme->setChecked(false);
+        ui->checkFirefox->setChecked(false);
+        ui->checkHexchat->setChecked(false);
     }
 }

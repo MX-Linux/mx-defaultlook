@@ -20,9 +20,10 @@ Changes:
    * changed disable function for horz and vertical checkbox to checked or unchecked
    * fixed hide of main settings panel when "Panel" settings is launched
    * changed location of desktop file
+   * added conflict with mx-panel-orientation
 Checksums-Sha1:
- 914a48b6796e66fb653ecacd65068e4d847b99fb 59382 mx-defaultlook_17.04.02mx16_i386.deb
+ 37c85ecbdb8f7c649a86ba6f9bf778a2faa88bbd 59396 mx-defaultlook_17.04.02mx16_i386.deb
 Checksums-Sha256:
- cebcb34edf797837fb195efb2baaf05209242fb135741a9f802355847ab24f88 59382 mx-defaultlook_17.04.02mx16_i386.deb
+ a4e59c4682611f538e76acb7cdce3f71e03a31bbbbbe983902a19c5a22f8a1b5 59396 mx-defaultlook_17.04.02mx16_i386.deb
 Files:
- cde82a8faf319d076ff81048b66030c3 59382 admin optional mx-defaultlook_17.04.02mx16_i386.deb
+ cc50f32fb911ae264bdbbf974d8a014d 59396 admin optional mx-defaultlook_17.04.02mx16_i386.deb

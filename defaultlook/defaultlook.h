@@ -115,6 +115,8 @@ private slots:
 
     void on_comboboxHorzPostition_currentIndexChanged(const QString &arg1);
 
+    void on_checkMX161Light_clicked();
+
 private:
     Ui::defaultlook *ui;
 };
