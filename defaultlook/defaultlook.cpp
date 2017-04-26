@@ -48,6 +48,12 @@ void defaultlook::setup()
     ui->buttonApply->setEnabled(false);
     checkXFCE();
     whichpanel();
+    message_flag = false;
+    QString cmd = QString("test -f ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml");
+    if (system(cmd.toUtf8()) != 0) {
+        backupPanel();
+        message2();
+    }
     setupuiselections();
 }
 
@@ -68,10 +74,13 @@ Result defaultlook::runCmd(QString cmd)
 
 void defaultlook::setupuiselections()
 {
-    //reset all radio buttons to unchecked
+    //reset all checkboxes to unchecked
 
     ui->checkVert->setChecked(false);
     ui->checkHorz->setChecked(false);
+    ui->radioBackupPanel->setChecked(false);
+    ui->radioDefaultPanel->setChecked(false);
+    ui->radioRestoreBackup->setChecked(false);
     ui->checkLightTheme->setChecked(false);
     ui->checkDarkTheme->setChecked(false);
     ui->checkFirefox->setChecked(false);
@@ -79,27 +88,36 @@ void defaultlook::setupuiselections()
 
     //only enable options that make sense
 
-    //if panel is already horizontal, set vertical option available, and vice versa
+    //if panel is already horizontal, set vertical option available, and vice versa  "" and "0" are horizontal
 
     QString test = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel +"/mode").output;
+     QString test2 = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel + "/position").output.section(";", 0,0);
+    qDebug() << "test2" << test2;
 
-    if (test == "") {
+    if (test == "" || test == "0") {
         ui->checkVert->setEnabled(true);
-        ui->checkHorz->setEnabled(false);
+        ui->checkHorz->setChecked(true);
+        if (test2 == "p=11" || test2 == "p=6" || test2 == "p=2") {
+            ui->comboboxHorzPostition->setCurrentIndex(1);
+        }
+
     }
-    if (test == "0") {
-        ui->checkVert->setEnabled(true);
-        ui->checkHorz->setEnabled(false);
-    }
-    if (test == "1") {
-        ui->checkVert->setEnabled(false);
+
+    if (test == "1" || test == "2") {
+        ui->checkVert->setChecked(true);
         ui->checkHorz->setEnabled(true);
     }
 
-    if (test == "2") {
-        ui->checkVert->setEnabled(false);
-        ui->checkHorz->setEnabled(true);
+    // if backup available, make the restore backup option available
+
+    QString cmd = QString("test -f ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml");
+    if (system(cmd.toUtf8()) == 0) {
+        ui->radioRestoreBackup->setEnabled(true);
+    } else {
+        ui->radioRestoreBackup->setEnabled(false);
     }
+    // check theme overrides
+
     QString home_path = QDir::homePath();
     QFileInfo file(home_path + "/.config/FirefoxDarkThemeOverride.check");
     if (file.exists()) {
@@ -252,14 +270,10 @@ void defaultlook::fliptohorizontal()
     if (tasklistID != "") {
         runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + tasklistID + "/show-labels -s true");
     }
+    //deteremine top or bottom horizontal placement
+    top_or_bottom();
 
-    //move to bottom per mx-16 defaults
-
-    runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel + "/position -s $(xfconf-query -c xfce4-panel -p /panels/panel-" + panel + "/position |sed s/p=./p=8/)");
-
-    //restart xfce4-panel
-
-    runCmd("xfce4-panel -r");
+    runCmd("xfce4-panel --restart");
 }
 
 void defaultlook::fliptovertical()
@@ -399,6 +413,7 @@ void defaultlook::fliptovertical()
     //change orientation to vertical
 
     runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel + "/mode -n -t int -s 2");
+    runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel + "/position -s 'p=5;x=0;y=0'");
 
     //change mode of tasklist labels if they exist
 
@@ -408,7 +423,7 @@ void defaultlook::fliptovertical()
 
     //restart xfce4-panel
 
-    system("xfce4-panel -r");
+    system("xfce4-panel --restart");
 }
 
 //// slots ////
@@ -418,19 +433,46 @@ void defaultlook::on_buttonApply_clicked()
 {
     ui->buttonApply->setEnabled(false);
 
+    //backups and default panel
+    if (ui->radioDefaultPanel->isChecked()) {
+        restoreDefaultPanel();
+        runCmd("sleep .5");
+        whichpanel();
+    }
+
+    if (ui->radioRestoreBackup->isChecked()) {
+        restoreBackup();
+        runCmd("sleep .5");
+        whichpanel();
+    }
+
+    if (ui->radioBackupPanel->isChecked()) {
+        backupPanel();
+
+    }
     //read in plugin ID's
     if (ui->checkHorz->isChecked()) {
-        fliptohorizontal();
+        QString test = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel +"/mode").output;
+
+        if (test == "1" || test =="2") {
+            fliptohorizontal();
+        }
+
+
         runCmd("sleep .5");
     }
 
     if (ui->checkVert->isChecked()) {
-        fliptovertical();
+        QString test = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel +"/mode").output;
+
+        if (test == "" || test =="0") {
+            fliptovertical();
+        }
         runCmd("sleep .5");
     }
 
     if (ui->checkDarkTheme->isChecked()) {
-
+        message_flag = true;
         QFileInfo theme("/usr/share/themes/Adwaita-Xfce-Dark-Thick");
         if (theme.exists()) {
             runCmd("xfconf-query -c xsettings -p /Net/ThemeName -s 'Adwaita-Xfce-Dark-Thick'");
@@ -444,12 +486,13 @@ void defaultlook::on_buttonApply_clicked()
             }
             //restart xfce4-panel
 
-            system("xfce4-panel -r");
+            system("xfce4-panel --restart");
         }
 
     }
 
     if (ui->checkLightTheme->isChecked()) {
+        message_flag = true;
         QFileInfo theme("/usr/share/themes/Greybird-thick-grip");
         if (theme.exists()) {
             runCmd("xfconf-query -c xsettings -p /Net/ThemeName -s Greybird-mx16-thick-grip");
@@ -463,9 +506,29 @@ void defaultlook::on_buttonApply_clicked()
             }
             //restart xfce4-panel
 
-            system("xfce4-panel -r");
+            system("xfce4-panel --restart");
         }
     }
+
+    if (ui->checkMX161Light->isChecked()) {
+        message_flag = true;
+        QFileInfo theme("/usr/share/themes/Greybird-thick-grip");
+        if (theme.exists()) {
+            runCmd("xfconf-query -c xsettings -p /Net/ThemeName -s Greybird-mx16-thick-grip");
+            runCmd("sleep .5");
+            runCmd("xfconf-query -c xfwm4 -p /general/theme -s Albatross");
+            runCmd("sleep .5");
+            QFileInfo icon("/usr/share/icons/Papirus-GTK");
+            if (icon.exists()) {
+                runCmd("xfconf-query -c xsettings -p /Net/IconThemeName -s 'Papirus-GTK'");
+                runCmd("sleep .5");
+            }
+            //restart xfce4-panel
+
+            system("xfce4-panel --restart");
+        }
+    }
+
     if (ui->checkFirefox->isChecked()) {
         runCmd("touch /home/$USER/.config/FirefoxDarkThemeOverride.check");
     } else {
@@ -484,15 +547,20 @@ void defaultlook::on_buttonApply_clicked()
             runCmd("mkdir -p " + home_path + "/.config/hexchat");
             runCmd("cp /usr/share/mx-defaultlook/hexchat.conf " + file_hexchat.absoluteFilePath());
         }
-      } else {
+    } else {
         if (file_hexchat.exists()) {
             //replace setting
             runCmd("sed -i -r 's/gui_input_style = 0/gui_input_style = 1/' " + file_hexchat.absoluteFilePath());
         }
     }
 
-    // message that we are done
-    message();
+
+    // message that we are done if a theme change was made
+
+    if (message_flag == true) {
+        message();
+        message_flag = false;
+    }
 
     // reset gui
     setupuiselections();
@@ -506,6 +574,7 @@ void defaultlook::on_checkLightTheme_clicked()
         ui->checkDarkTheme->setChecked(false);
         ui->checkFirefox->setChecked(false);
         ui->checkHexchat->setChecked(false);
+        ui->checkMX161Light->setChecked(false);
     }
 }
 
@@ -516,6 +585,7 @@ void defaultlook::on_checkDarkTheme_clicked()
         ui->checkLightTheme->setChecked(false);
         ui->checkHexchat->setChecked(true);
         ui->checkFirefox->setChecked(true);
+        ui->checkMX161Light->setChecked(false);
     }
 }
 
@@ -552,8 +622,13 @@ void defaultlook::on_buttonHelp_clicked()
 
 void defaultlook::message()
 {
-    QMessageBox::information(0, tr("MX Default Look"),
+    QString cmd = "ps -aux |grep -v grep|grep firefox";
+    if ( system(cmd.toUtf8()) != 0 ) {
+        qDebug() << "Firefox not running" ;
+    } else {
+        QMessageBox::information(0, tr("MX Default Look"),
                              tr("Finished! Firefox may require a restart for changes to take effect"));
+    }
 }
 
 void defaultlook::checkXFCE()
@@ -567,22 +642,170 @@ void defaultlook::checkXFCE()
     }
 }
 
+// backs up the current panel configuration
+void defaultlook::backupPanel()
+{
+    runCmd("rm -Rf ~/.restore; mkdir -p ~/.restore/.config/xfce4; \
+           mkdir -p ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml; \
+            cp -Rf ~/.config/xfce4/panel ~/.restore/.config/xfce4; \
+    cp -f ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/");
+}
+
+void defaultlook::restoreDefaultPanel()
+{
+    // copy template files
+    runCmd("pkill xfconfd; rm -Rf ~/.config/xfce4/panel; cp -Rf /usr/local/share/appdata/panels/vertical/panel ~/.config/xfce4; \
+           cp -f /usr/local/share/appdata/panels/vertical/xfce4-panel.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml; \
+             xfconfd; sleep 2; xfce4-panel --restart");
+}
+
+void defaultlook::restoreBackup()
+{
+    runCmd("pkill xfconfd; rm -Rf ~/.config/xfce4/panel; cp -Rf ~/.restore/.config/xfce4/panel ~/.config/xfce4; \
+           cp -f ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml; \
+            xfconfd; sleep 2; xfce4-panel --restart");
+}
+
 void defaultlook::on_checkHorz_clicked()
 {
     ui->buttonApply->setEnabled(true);
+    if (ui->checkHorz->isChecked()) {
+        ui->checkVert->setChecked(false);
+        ui->radioBackupPanel->setChecked(false);
+        ui->radioDefaultPanel->setChecked(false);
+        ui->radioRestoreBackup->setChecked(false);
+    }
+
+
 }
 
 void defaultlook::on_checkVert_clicked()
 {
     ui->buttonApply->setEnabled(true);
+    if (ui->checkVert->isChecked()) {
+        ui->checkHorz->setChecked(false);
+        ui->radioBackupPanel->setChecked(false);
+        ui->radioDefaultPanel->setChecked(false);
+        ui->radioRestoreBackup->setChecked(false);
+    }
+
 }
 
 void defaultlook::on_checkFirefox_clicked()
 {
     ui->buttonApply->setEnabled(true);
+    message_flag = true;
 }
 
 void defaultlook::on_checkHexchat_clicked()
 {
     ui->buttonApply->setEnabled(true);
+}
+
+
+void defaultlook::on_radioDefaultPanel_clicked()
+{
+    ui->buttonApply->setEnabled(true);
+    if (ui->radioDefaultPanel->isChecked()) {
+        ui->checkHorz->setChecked(false);
+        ui->radioBackupPanel->setChecked(false);
+        ui->checkVert->setChecked(false);
+        ui->radioRestoreBackup->setChecked(false);
+    }
+}
+
+void defaultlook::on_radioBackupPanel_clicked()
+{
+    ui->buttonApply->setEnabled(true);
+    if (ui->radioBackupPanel->isChecked()) {
+        ui->checkHorz->setChecked(false);
+        ui->checkVert->setChecked(false);
+        ui->radioDefaultPanel->setChecked(false);
+        ui->radioRestoreBackup->setChecked(false);
+    }
+}
+
+void defaultlook::on_radioRestoreBackup_clicked()
+{
+    ui->buttonApply->setEnabled(true);
+    if (ui->radioRestoreBackup->isChecked()) {
+        ui->checkHorz->setChecked(false);
+        ui->radioBackupPanel->setChecked(false);
+        ui->radioDefaultPanel->setChecked(false);
+        ui->checkVert->setChecked(false);
+    }
+
+}
+
+void defaultlook::top_or_bottom()
+{
+    //move to user selected top or bottom border per mx-16 defaults  p=11 is top, p=12 is bottom
+
+    QString top_bottom;
+    if (ui->comboboxHorzPostition->currentIndex() == 0) {
+        top_bottom = "12";
+    }
+
+    if (ui->comboboxHorzPostition->currentIndex() == 1) {
+        top_bottom = "11";
+    }
+
+    qDebug() << "position index is : " << ui->comboboxHorzPostition->currentIndex();
+    qDebug() << "position is :" << top_bottom;
+
+    runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel + "/position -s 'p=" + top_bottom + ";x=0;y=0'");
+
+}
+
+void defaultlook::message2()
+{
+    QMessageBox::information(0, tr("Panel settings"),
+                             tr(" Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)"));
+}
+
+void defaultlook::on_toolButtonXFCEpanelSettings_clicked()
+{
+    this->hide();
+    system("xfce4-panel --preferences");
+    system("xprop -spy -name Panel >/dev/null");
+    this->show();
+    setupuiselections();
+}
+
+void defaultlook::on_toolButtonXFCEAppearance_clicked()
+{
+    this->hide();
+    system("xfce4-appearance-settings");
+    this->show();
+}
+
+void defaultlook::on_toolButtonXFCEWMsettings_clicked()
+{
+    this->hide();
+    system("xfwm4-settings");
+    this->show();
+}
+
+void defaultlook::on_comboboxHorzPostition_currentIndexChanged(const QString &arg1)
+{
+    qDebug() << "top or bottom output " << ui->comboboxHorzPostition->currentText();
+    QString test = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel +"/mode").output;
+    qDebug() << "test value, blank or 0 runs top_or_bottom" << test;
+    if (test == "") {
+        top_or_bottom();
+    }
+    if (test == "0") {
+        top_or_bottom();
+    }
+}
+
+void defaultlook::on_checkMX161Light_clicked()
+{
+    ui->buttonApply->setEnabled(true);
+    if (ui->checkMX161Light->isChecked()) {
+        ui->checkLightTheme->setChecked(false);
+        ui->checkDarkTheme->setChecked(false);
+        ui->checkFirefox->setChecked(false);
+        ui->checkHexchat->setChecked(false);
+    }
 }

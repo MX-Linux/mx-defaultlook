@@ -10,5 +10,8 @@ Vcs-Git: git://github.com/mxlinux/mx-defaultlook.git
 Package: mx-defaultlook
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}, mx-viewer, mx-adwaita-dark-xfce-themes, mx-greybird-themes (>= 16.10mx16)
+Provides: mx-panel-orientation
+Conflicts: mx-panel-orientation
+Replaces: mx-panel-orientation
 Description: MX Default Look
  MX Default Look is a tool for quick default appearance settings in MX Linux
