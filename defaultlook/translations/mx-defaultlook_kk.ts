@@ -92,11 +92,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="176"/>
-        <source>XFCE Settings</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../defaultlook.ui" line="201"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the panel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>Панельді баптау</translation>
@@ -150,6 +145,11 @@
         <location filename="../defaultlook.ui" line="157"/>
         <source>Help</source>
         <translation>Көмек</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="176"/>
+        <source>Xfce Settings</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="298"/>
