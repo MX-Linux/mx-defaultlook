@@ -37,3 +37,6 @@ TRANSLATIONS += translations/mx-defaultlook_ca.ts \
                 translations/mx-defaultlook_sk.ts \
                 translations/mx-defaultlook_sv.ts \
                 translations/mx-defaultlook_tr.ts
+
+RESOURCES += \
+    images.qrc

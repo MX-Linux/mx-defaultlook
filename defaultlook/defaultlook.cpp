@@ -46,6 +46,9 @@ void defaultlook::setup()
     this->setWindowTitle(tr("MX Default Look"));
     this->adjustSize();
     ui->buttonApply->setEnabled(false);
+    if (ui->buttonApply->icon().isNull()) {
+        ui->buttonApply->setIcon(QIcon(":/icons/dialog-ok.svg"));
+    }
     checkXFCE();
     whichpanel();
     message_flag = false;

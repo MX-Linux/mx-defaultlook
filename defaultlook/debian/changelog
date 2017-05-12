@@ -1,3 +1,9 @@
+mx-defaultlook (17.05mx16) mx; urgency=medium
+
+  * changed button icons
+
+ -- Adrian <adrian@mxlinux.org>  Fri, 12 May 2017 18:50:41 -0400
+
 mx-defaultlook (17.04.02mx16) mx; urgency=medium
 
   * merged functions of mx-panel-orientation and mx-defaultlook
