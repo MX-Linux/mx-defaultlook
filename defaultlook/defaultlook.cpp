@@ -606,9 +606,9 @@ void defaultlook::on_buttonAbout_clicked()
                        tr("App for quick default ui theme changes") +
                        "</h3></p><p align=\"center\"><a href=\"http://mxlinux.org\">http://mxlinux.org</a><br /></p><p align=\"center\">" +
                        tr("Copyright (c) MX Linux") + "<br /><br /></p>", 0, this);
-    msgBox.addButton(tr("Cancel"), QMessageBox::AcceptRole); // because we want to display the buttons in reverse order we use counter-intuitive roles.
-    msgBox.addButton(tr("License"), QMessageBox::RejectRole);
-    if (msgBox.exec() == QMessageBox::RejectRole) {
+    msgBox.addButton(tr("License"), QMessageBox::AcceptRole);
+    msgBox.addButton(tr("Cancel"), QMessageBox::NoRole);
+    if (msgBox.exec() == QMessageBox::AcceptRole) {
         system("mx-viewer file:///usr/share/doc/mx-defaultlook/license.html '" + tr("MX Default Look").toUtf8() + " " + tr("License").toUtf8() + "'");
     }
     this->show();
