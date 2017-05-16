@@ -1,0 +1,29 @@
+Format: 1.8
+Date: Tue, 16 May 2017 18:49:17 -0500
+Source: mx-defaultlook
+Binary: mx-defaultlook
+Architecture: source amd64
+Version: 17.05.02mx16
+Distribution: mx
+Urgency: medium
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Changed-By: dolphinoracle <dolphinoracle@gmail.com>
+Description:
+ mx-defaultlook - MX Default Look
+Changes:
+ mx-defaultlook (17.05.02mx16) mx; urgency=medium
+ .
+   * added arc-theme as a depend
+   * changed mx 16.1 theme to arc-dark window manager theme
+Checksums-Sha1:
+ bf76a77c9e7df82b290d190e4a27ca0ad739a630 664 mx-defaultlook_17.05.02mx16.dsc
+ 197410daec6e584bbb2356b6286bac5a55c6d081 51376 mx-defaultlook_17.05.02mx16.tar.xz
+ c92bc97ae99f9c7cf1606d832793d05a51e0d1f3 56110 mx-defaultlook_17.05.02mx16_amd64.deb
+Checksums-Sha256:
+ 7f5c9cfa2d548fec45fa3c67d7cf2f9bd5bc15f5b714a7846ca0f494d452e497 664 mx-defaultlook_17.05.02mx16.dsc
+ bfb79d1d8f0bf0cb7c9438e48f261a769e0781359060612ce43befda9176f094 51376 mx-defaultlook_17.05.02mx16.tar.xz
+ 20f5440f959c5c2b6863f16d70e62bfc5eab2f4ae0c5c9ca59e55a587a2132d1 56110 mx-defaultlook_17.05.02mx16_amd64.deb
+Files:
+ 11de4bc85530269ae28eee225bd9d3ac 664 admin optional mx-defaultlook_17.05.02mx16.dsc
+ df4a14d672a937122130c0cde9c13002 51376 admin optional mx-defaultlook_17.05.02mx16.tar.xz
+ 3c56177fba7a0fe27a4f6721ec561788 56110 admin optional mx-defaultlook_17.05.02mx16_amd64.deb

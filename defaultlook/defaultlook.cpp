@@ -519,7 +519,7 @@ void defaultlook::on_buttonApply_clicked()
         if (theme.exists()) {
             runCmd("xfconf-query -c xsettings -p /Net/ThemeName -s Greybird-mx16-thick-grip");
             runCmd("sleep .5");
-            runCmd("xfconf-query -c xfwm4 -p /general/theme -s Albatross");
+            runCmd("xfconf-query -c xfwm4 -p /general/theme -s Arc-Dark");
             runCmd("sleep .5");
             QFileInfo icon("/usr/share/icons/Papirus-GTK");
             if (icon.exists()) {
