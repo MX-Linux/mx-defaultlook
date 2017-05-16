@@ -1,3 +1,10 @@
+mx-defaultlook (17.05.02mx16) mx; urgency=medium
+
+  * added arc-theme as a depend
+  * changed mx 16.1 theme to arc-dark window manager theme
+
+ -- dolphinoracle <dolphinoracle@gmail.com>  Tue, 16 May 2017 18:49:17 -0500
+
 mx-defaultlook (17.05mx16) mx; urgency=medium
 
   * changed button icons
