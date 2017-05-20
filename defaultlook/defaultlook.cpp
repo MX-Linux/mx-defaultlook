@@ -589,6 +589,11 @@ void defaultlook::on_checkDarkTheme_clicked()
         ui->checkHexchat->setChecked(true);
         ui->checkFirefox->setChecked(true);
         ui->checkMX161Light->setChecked(false);
+    } else {
+        ui->checkLightTheme->setChecked(false);
+        ui->checkHexchat->setChecked(false);
+        ui->checkFirefox->setChecked(false);
+        ui->checkMX161Light->setChecked(false);
     }
 }
 
