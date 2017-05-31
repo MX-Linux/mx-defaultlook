@@ -45,12 +45,12 @@
     <message>
         <location filename="../defaultlook.ui" line="172"/>
         <source>Xfce Settings</source>
-        <translation>Paramètres Xfce</translation>
+        <translation>Paramètres de Xfce</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="197"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the panel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Personnalisez le tableau de bord&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Personnaliser le tableau de bord&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="212"/>
@@ -60,7 +60,7 @@
     <message>
         <location filename="../defaultlook.ui" line="219"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configure window behavior and shortcuts&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configurez le comportement de fenêtre et les raccourcis&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configurer le comportement de fenêtre et les raccourcis&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="234"/>
@@ -70,7 +70,7 @@
     <message>
         <location filename="../defaultlook.ui" line="241"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the look of your desktop&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Personnalisez l&apos;apparence de votre bureau&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Personnaliser l&apos;apparence de votre bureau&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="256"/>
@@ -110,17 +110,17 @@
     <message>
         <location filename="../defaultlook.ui" line="315"/>
         <source>MX 16 Default light theme</source>
-        <translation>Thème clair par défait de MX 16</translation>
+        <translation>Thème clair par défaut de MX 16</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="323"/>
         <source>Bottom</source>
-        <translation>Bas</translation>
+        <translation>En bas</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="328"/>
         <source>Top</source>
-        <translation>Haut</translation>
+        <translation>En haut</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="342"/>
@@ -130,7 +130,7 @@
     <message>
         <location filename="../defaultlook.ui" line="362"/>
         <source>Fix HexChat input box in dark theme</source>
-        <translation>Corriger la zone de saisie de Hexchat avec un thème sombre</translation>
+        <translation>Corriger la zone de saisie de Hexchat en thème sombre</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="369"/>
@@ -170,7 +170,7 @@
     <message>
         <location filename="../defaultlook.cpp" line="611"/>
         <source>App for quick default ui theme changes</source>
-        <translation>Application permettant des modifications rapides de thèmes par défaut</translation>
+        <translation>Application permettant des modifications rapides du thème par défaut</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="613"/>
